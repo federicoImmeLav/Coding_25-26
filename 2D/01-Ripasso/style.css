@@ -1,0 +1,39 @@
+/* per chiamare le classi devo usare il punto  */
+/* per dire alle cose come devono essere devo usare le parentesi graffe */
+.rosso {
+    /* tutto quello che scrivo qui vale per rosso */
+    color:red; /* testo rosso */
+}
+
+/* chiamo il quadrato  */
+.quadrato {
+    height: 100px; /* altezza */
+    width: 100px; /* larghezza */
+    background-color: blue; /* colore di sfondo */
+    display: block;
+    /* per posizionarlo devo specificare la distanza da sopra e dal lato  */
+    /* position: absolute; */
+    left: 50%; /* distanza da sx */
+    top: 80%; /* distanza da sopra */
+}
+
+
+/* personalizzo immagine  */
+.immagine {
+    width: 400px; /* se cambio la larghezza, immagine cambia automaticamente */
+    /* position: absolute; */
+    left: 30%;
+    /* immagine si comporta come qualunque altro elemento  */
+}
+
+.principale {
+    border: 2px solid salmon; /* bordo agli elementi */
+}
+
+h1 {
+    text-align: center;
+}
+
+.maldive {
+    width: 500px;
+}
