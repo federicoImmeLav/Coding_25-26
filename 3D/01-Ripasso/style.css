@@ -1,0 +1,72 @@
+/* per le classi si usa il punto, per gli id #  */
+
+#menu {
+    background-color: coral; /* colore di sfondo */
+    height: 10vh; /* altezza */
+    /* comandi per mettere in mezzo */
+    display: flex;
+    align-items: center; /* allinea in verticale */
+    justify-content: center; /* allinea in orizzontale */
+}
+
+#nome {
+    margin: 0; /* margini */
+    text-align: center; /* allinea il testo */
+}
+
+#hero {
+    background-color: black;
+    height: 90vh;
+    display: flex;
+    align-items: center; /* allinea in verticale */
+    justify-content: center; /* allinea in orizzontale */
+}
+
+.intro {
+    color: azure; /* colore del testo */
+}
+
+.cornice {
+    border: 3px solid darkolivegreen; /* bordo */
+}
+
+/* imposto una immagine come sfondo del div  */
+.vacanza1 {
+    background-image: url("./img/maldive.jpg");
+    height: 30vh;
+    background-size: cover; /* dimensione */
+    background-position: 50% 25%; /* posizione dell'immagine */
+    margin: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.luogo {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.vacanza2 {
+    background-image: url("./img/barcellona.jpg");
+    height: 30vh;
+    background-size: cover; /* dimensione */
+    background-position: 50% 25%; /* posizione dell'immagine */
+    margin: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vacanza3 {
+    background-image: url("./img/mont.jpg");
+    height: 30vh;
+    background-size: cover; /* dimensione */
+    background-position: 50% 25%; /* posizione dell'immagine */
+    margin: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
