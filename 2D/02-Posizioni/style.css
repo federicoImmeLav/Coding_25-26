@@ -1,0 +1,52 @@
+ header {
+    background-color: chocolate;
+    height: 10vh; /* altezza */
+    display: flex;
+    justify-content: center; /* allineo in orizzontale */
+    align-items: center; /* allinea in verticale */
+ }
+
+ /* tolgo il margin a h1  */
+ h1, h3 {
+    margin: 0;
+ }
+
+ .materia {
+    /* border: 2px solid black; */
+    margin: 5vh;
+    border-radius: 3vh;
+    background-color: bisque;
+    width: 30%;
+ }
+
+ .titolo {
+    /* border-bottom: 2px solid black; bordo solo sotto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+ }
+
+ .voto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    color: red;
+    font-family: sans-serif;
+    font-weight: 700;
+    font-size: xx-large;
+    background-color: beige;
+    border-bottom-left-radius: 3vh;
+    border-bottom-right-radius: 3vh;
+ }
+
+ h3 {
+    font-family: sans-serif;
+ }
+
+ .libretto {
+    display: flex;
+ }
