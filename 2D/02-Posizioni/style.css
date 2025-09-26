@@ -16,7 +16,7 @@
     margin: 5vh;
     border-radius: 3vh;
     background-color: bisque;
-    width: 30%;
+    width: 28%;
  }
 
  .titolo {
@@ -49,4 +49,34 @@
 
  .libretto {
     display: flex;
+    /* comando che va a capo automaticamente */
+    flex-wrap: wrap;
+ }
+
+ .presenze {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color:cornsilk;
+   padding-top: 3vh;
+   padding-bottom:3vh ;
+ }
+
+ #cerchio {
+   border-radius: 50%;
+   background-color: gray;
+   height: 100px;
+   width: 100px;
+   margin-left: 50px;
+ }
+
+ p {
+   color: blue;
+   font-family: sans-serif;
+ }
+
+ .footer {
+   display: flex;
+   justify-content: space-around;
+   background-color: azure;
  }
