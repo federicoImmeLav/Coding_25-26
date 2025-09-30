@@ -1,0 +1,15 @@
+#quadrato{
+background-color: red;
+width: 90px;
+height: 90px;
+
+}
+header{
+background-color:purple;
+justify-content:space-evenly ;
+height: 5vh;
+display: flex;
+align-items: center;
+
+
+}
