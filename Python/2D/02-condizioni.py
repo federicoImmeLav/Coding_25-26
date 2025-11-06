@@ -57,9 +57,9 @@
     #devo ricordarmi di mettere sempre la condizione di stop
 
 #Fino a quando non rispondiamo giusto continua a chiedermelo
-nome = input("Come ti chiami? ")
+# nome = input("Come ti chiami? ")
 
-while nome != "Federico":
-    nome = input("Hai sbagliato, Come ti chiami? ")
+# while nome != "Federico":
+#     nome = input("Hai sbagliato, Come ti chiami? ")
 
-print("hai risposto giusto!")
+# print("hai risposto giusto!")

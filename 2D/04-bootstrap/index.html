@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intro Bootstrap</title>
+    <!-- Link di bootstrap  -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- bootstrap divide sempre tutto in 12 colonne  -->
+    <!-- <div class="container-fluid">
+        dentro al contenitore ci sono le righe divise a loro volta
+        in colonne 
+        <div class="row">
+            dentro alla riga metto le colonne  
+            <div class="col-4 bg-primary">
+                prima colonna
+            </div>
+            <div class="col-4 bg-secondary">
+                seconda colonna
+            </div>
+            <div class="col-4 bg-warning">
+                terza colonna
+            </div>
+        </div>
+    </div> -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Contatti</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link" href="#">Info</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Old</a>
+                </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- faccio una struttura a 4 colonne  -->
+     <div class="container-fluid">
+        <div class="row">
+            <h2>Le mie passioni</h2>
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card" style="width: 18rem;">
+                    <img src="..." class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <!--  contatti e indirizzo -->
+            <div class="col-6">
+                <h3>Indirizzo</h3>
+                <p>Via le dita dal naso 32, Milano</p>
+                <h3>E-mail</h3>
+                <p>nomecognome@mail.it</p>
+            </div>
+            <!-- 4 righe su di me -->
+            <div class="col-6">
+                <h3>About me</h3>
+                <p>Prof di grafica e informatica, 30 anni e ancora convinto che “funziona sul mio computer” sia una scusa valida. Ama il caffè, i pixel ben allineati e gli studenti che ricordano di salvare i file.</p>
+            </div>
+            
+        </div>
+     </div>
+
+    <!-- script di bootstrap  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
