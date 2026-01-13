@@ -1,0 +1,53 @@
+<!-- tutti i file di html iniziano cosi -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Titolo del sito -->
+    <title>Posizionamento</title>
+    <!-- Aggiugno la sezione dello style   -->
+    <style>
+        /* Dentro a questa sezione vanno tutte le indicazioni di 
+        stile con il css */
+        /* Per chiamare le classi si usa il punto */
+        /* Chiamo l'elemento che ha classe quadrato */
+        .quadrato {
+            /* tutte le proprietà di quadrato dovranno stare
+            dentro a queste parentesi graffe */
+            background-color: red; /* colore di sfondo */
+            width: 100px; /* larghezza uguale a 100 pixel */
+            height: 100px; /* altezza uguale a 100 pixel */
+        }
+        .sfondo {
+            background-color:gray;
+        }
+        /* proprietà css per fare un cerchio */
+        .cerchio {
+            background-color: cadetblue;
+            width: 100px;
+            height: 100px;
+            /* arrotondo gli angoli per creare un cerchio */
+            border-radius: 50%;
+            /* Per cambiare le posizioni degli elementi serve
+            usare position + indicare la distanza degli elementi 
+            dall'alto e dalla sinistra della pagina */
+            position: absolute; /* decido io la posizione */
+            top: 50%; /* distanza da sopra in percentuale */
+            left: 50%; /* distanza da sinistra in percentuale */
+        }
+
+    </style>
+</head>
+<body class="sfondo">
+    <!-- Tutto il codice html si scrive sempre dentro al body  -->
+    <h1>Titolo grande</h1>
+    <p>Paragrafo di testo</p>
+    <!-- Creo un quadrato selezionando dello spazio nel sito  -->
+    <!-- Class è un modo di dare un nome ai nostri elementi -->
+    <div class="quadrato"></div>
+
+    <!-- Creo un secondo elemento che sarà un cerchio  -->
+    <div class="cerchio"></div>
+</body>
+</html>

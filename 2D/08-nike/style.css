@@ -1,0 +1,43 @@
+/* per chiamare una classe devo usare il punto  */
+.fascia {
+    background-color: lightgray;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.menu {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.home {
+    background-image: url("./img/mejores-zapatillas-nike-2025-corredores.jpg");
+    height: 70vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding-bottom: 5vh;
+}
+
+.titolo {
+    color: white;
+    font-size: xxx-large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.sottotitolo {
+    color: white;
+    text-align: center;
+}
+
+.pulsante {
+    background-color: white;
+    border-radius: 50px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+

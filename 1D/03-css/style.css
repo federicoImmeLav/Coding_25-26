@@ -1,0 +1,39 @@
+/* Per chiamare le classi bisogna mettere il punto davanti */
+.p-blu {
+    /* tutto quello che scrivo qui, sarà di p-blu  */
+    color: blue; /* cambio colore del testo */
+    background-color: gray; /* cambio colore dello sfondo */
+    font-size: 50px; /* dimensione del testo */
+}
+
+.paragrafo2 {
+    font-weight: bold; /* scritta in grassetto */
+    text-transform: uppercase; /* mette la scritta tutta maiuscola */
+    font-family: monospace; /* cambio il tipo di scritta */
+} 
+
+.primo {
+    border: 2px solid green; /* metto un bordo al testo */
+    /* il padding è la distanza tra un elemento e il suo bordo  */
+    padding: 20px;
+    /* posso anche specificarlo solo in una direzione  */
+    /* padding-bottom: 100px;  padding sotto 
+    padding-left: 100px;  padding sinistra 
+    padding-right: 100px;  padding destra 
+    padding-top: 100px; padding sopra */
+    background-color: aqua;
+}
+
+.secondo {
+    border: 2px solid green; /* metto un bordo al testo */
+    /* il margin è la distanza tra gli elementi  */
+    margin: 20px;
+    /* margin-bottom: 100px;  margin sotto 
+    margin-left: 100px;  margin sinistra 
+    margin-right: 100px;  margin destra 
+    margin-top: 100px; margin sopra */
+    background-color: aqua;
+}
+
+
+

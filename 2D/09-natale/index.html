@@ -1,0 +1,35 @@
+<!-- sito che si apre con un campo di input che mi chiede il nome
+ quando scrivo il nome e faccio invio compare la pagina che mi fa
+ gli auguri di buon Natale con immagini, colori, etc -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Natale</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section id="home">
+        <div>
+            <h1>Ciao! Come ti chiami?</h1>
+            <input type="text" id="nome">
+            <button onclick="leggi()">Invia</button>
+        </div>
+    </section>
+
+    <section id="natale">
+        <div>
+            <h1 id="benvenuto"></h1>
+            <h1 id="auguri">Tanti auguri di Buon Natale!</h1>
+            <img src="./img/ghirlanda.png" width="800" alt="">  
+        </div>
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,8 @@
+.hero {
+    height: 90vh;
+}
+
+/* tolgo i puntini all'elenco  */
+ul {
+     list-style-type: none;
+}

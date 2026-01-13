@@ -1,0 +1,42 @@
+nav {
+    padding-left: 5% !important;
+    padding-right: 5% !important;
+}
+
+.fucsia {
+    background-color: rgb(150, 1, 128);
+    color: white;
+}
+
+.primo {
+    background-image: url("./img/carousel\ 1.avif");
+    height: 60vh;
+    background-size: cover;
+}
+
+.secondo {
+    background-image: url("./img/carousel\ 2.avif");
+    height: 60vh;
+    background-size: cover;
+}
+
+p {
+    margin: 0;
+}
+
+.carousel {
+    padding: 0 !important;
+}
+
+.carta {
+    height: 50vh;
+}
+
+.card-footer, .card-header {
+    border: none;
+    background-color: transparent;
+}
+
+.btn, .card {
+    border-radius: 0;
+}

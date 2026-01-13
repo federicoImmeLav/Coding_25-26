@@ -1,0 +1,20 @@
+#home {
+    height: 100vh;
+    background-color: burlywood;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+#natale {
+    height: 100vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
