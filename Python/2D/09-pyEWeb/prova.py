@@ -18,7 +18,7 @@ def creo_info(nome, eta):
 # funzioni aggiuntive che riguardano i file json
 import json 
 
-studente = creo_info("Emanuele", 16)
+studente = creo_info("Simone", 16)
 
 # crea il file json e scrivici dentro le info di studente
 with open("studente.json", "w") as file:

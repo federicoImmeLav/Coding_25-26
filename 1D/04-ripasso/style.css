@@ -1,0 +1,59 @@
+/* Chiamo le classi del testo */
+/* Per chiamare le classi si mette il punto davanti */
+.testo1 {
+    /* colore del testo */
+    color: green;
+    /* grassetto */
+    font-weight: bolder;
+}
+
+.testo2 {
+    color: blue;
+    font-style: italic;
+}
+
+.testo3 {
+    /* dimensione del testo */
+    font-size: 30px;
+}
+
+.bottone1 {
+    /* spazio all'interno a destra */
+    padding-right: 40px;
+    /* spazio all'interno sotto */
+    padding-bottom: 80px;
+    /* bordo */
+    border: 3px solid red; 
+    /* colore di sfondo */
+    background-color: cadetblue;
+}
+
+/* personalizzo il quadrato */
+.quadrato {
+    /* altezza */
+    height: 100px;
+    /* larghezza */
+    width: 100px;
+    background-color: coral;
+}
+
+/* per fare animazione quando passa sopra il mouse si usa
+:hover */
+.quadrato:hover {
+    /* quello che scrivo qui succede SOLO se passa sopra
+    il mouse */
+    background-color: blueviolet;
+    /* tipo di cursore */
+    cursor: pointer;
+    width: 200px;
+    /* tipo di transizione */
+    transition: 0.3s linear;
+}
+
+/* animazione al testo */
+.prova:hover {
+    color: white;
+    background-color: darkblue;
+    cursor: pointer;
+    transition: 0.1s linear;
+}
