@@ -1,0 +1,41 @@
+.calcolatrice {
+    height: 100vh;
+    background-color: darkcyan;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    margin: 0;
+}
+
+button {
+    border: none;
+    background-color:cornflowerblue;
+    color: white;
+    padding: 3vh;
+    margin: 2vh;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color:white;
+    color: cornflowerblue;
+}
+
+.contenitore {
+    border: 2px solid cornflowerblue;
+    padding: 10vh;
+    border-radius: 3vh;
+}
+
+.bianco {
+    height: 8vh;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-weight: bolder;
+}
