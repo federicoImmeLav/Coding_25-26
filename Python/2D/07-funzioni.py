@@ -21,12 +21,12 @@
 
 # funzione che calcola l'area del rettangolo
 # l'area del rettangolo si calcola base x altezza
-# def area_rettangolo(base,altezza):
-#     area = base * altezza
-#     print(f"l'area del rettangolo è {area}")
+def area_rettangolo(base,altezza):
+    area = base * altezza
+    print(f"l'area del rettangolo è {area}")
 
 # funzione con parametri definiti prima 
-# area_rettangolo(10,2)
+area_rettangolo(10,2)
 
 # base = int(input("Quanto misura la base? "))
 # altezza = int(input("Quanto misura l'altezza? "))

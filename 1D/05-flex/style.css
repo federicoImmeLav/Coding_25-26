@@ -1,0 +1,24 @@
+.contenitore {
+    /* altezza di tutta la pagina */
+    height: 100vh;
+    background-color: coral;
+    /* comandi per posizionare il contenuto dove voglio io */
+    display: flex;
+    /* Per posizionare in orizzontale */
+    justify-content: space-around;
+    /* Per posizionare in verticale */
+    align-items: center;
+    /* direzione del posizionamento */
+    /* Inverte tutto anche quelle prima */
+    flex-direction: column; 
+}
+
+body {
+    margin: 0;
+}
+
+.rosso {
+    height: 100px;
+    width: 100px;
+    background-color: crimson;
+}

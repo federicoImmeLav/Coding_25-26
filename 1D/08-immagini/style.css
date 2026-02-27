@@ -1,0 +1,55 @@
+body {
+    margin: 0;
+}
+
+.titolo {
+    text-align: center;
+    background-color: blueviolet;
+    color: white;
+    font-family: monospace;
+    margin: 0;
+    /* Il padding è spazio vuoto che aiuta ad allargare tutto */
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+}
+
+.sottotitolo {
+    margin: 0;
+    color: blueviolet;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    font-family: monospace;
+}
+
+/* Per impostare le dimensioni dell'immagine la chiamiamo nel css
+e usiamo le proprietà corrette */
+.immagine {
+    /* occupa tutto lo spazio che ha a disposizione */
+    width: 100%;
+    /* imposto uno spazio massimo per l'immagine */
+    max-width: 500px;
+    /* per impostare tutte le immagini alte uguali impostiamo 
+    prima altezza */
+    height: 40vh;
+    /* e poi diciamo di ritagliare l'immagine senza deformarla */
+    object-fit: cover;
+}
+
+/* dispongo le immagini in orizzontale */
+.contenitore {
+    display: flex;
+    justify-content: space-around;
+}
+
+h3 {
+    color: blueviolet;
+    font-family: monospace;
+    text-align: center;
+}
+
+/* Selezione solo l'elemento che si chiama centro e lo metto in mezzo */
+.centro {
+    /* comandi che insieme centrano un elemento nella pagina  */
+    margin: auto; /* margini automatici = centro */
+    display: block;
+}

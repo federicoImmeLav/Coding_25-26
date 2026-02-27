@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+}
+
+/* chiamo header */
+header {
+    background-color: darkslategrey;
+    /* altezza */
+    height: 8vh; /* vh indica l'altezza in percentuale rispetto allo schermo */
+    display: flex;
+    align-items: center; /* allinea in verticale */
+    justify-content: space-evenly; /* allinea in orizzontale */
+    /* fisso la posizione sempre sopra */
+    position: sticky;
+    top: 0;
+}
+
+button {
+    /* tolgo il bordo */
+    border: none;
+    background-color: transparent;
+    font-size: large;
+    font-weight: bold; /* grassetto */
+    color: white;
+    font-family: monospace; 
+    cursor: pointer;
+}
+
+
+/* imposto immagine di sfondo alla sezione benvenuto */
+.benvenuto {
+    height: 92vh;
+    background-image: url("./img/neve.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titolo {
+    background-color: white;
+    padding: 4vh;
+    font-size: x-large;
+    font-family: monospace;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.informazioni {
+    display: flex;
+    background-color: slategray;
+    color: white;
+    font-family: monospace;
+}
+
+.testo, .immagine {
+    width: 50%;
+    margin: 10vh;
+}
+
+.immagine {
+    background-image: url("./img/IMG_2124_Everest.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pulsante {
+    border: 0.5px solid white;
+    padding: 1vh;
+    border-radius: 10px;
+}
+
+/* hover fa l'animazione quando passiamo sopra con il mouse */
+.pulsante:hover {
+    cursor: pointer;
+    background-color: white;
+    color: slategray;
+}
+
+
+/* css per sezione di card orizzontale */
+.catalogo {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 30%;
+    margin: 5vh;
+    font-family: monospace;
+    border: 1px solid darkslategray;
+    padding: 5vh;
+    border-radius: 20px;
+}
+
+.img {
+    height: 30vh;
+    overflow: hidden;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+
+
+

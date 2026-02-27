@@ -1,0 +1,23 @@
+/* Incollo la striscia di codice che ho copiato da @import */
+@import url('https://fonts.googleapis.com/css2?family=Gravitas+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+/* Con il css posso anche cambiare il tipo di font, 
+è importante però installare il font nel sito altrimenti
+non funziona */
+.font1 {
+   font-family: "Gravitas One", serif;
+}
+.font2 {
+    font-family: "Playfair Display", serif;
+}
+
+.testo {
+    /* dimensioni */
+    font-size: large;
+    /* grassetto  */
+    font-weight: bolder;
+    /* corsivo  */
+    font-style: italic;
+    /* stile: monospace, sans, etc  */
+    font-family: monospace;
+}

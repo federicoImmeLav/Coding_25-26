@@ -31,3 +31,4 @@ anno = int(input("Qual è il tuo anno di nascita? "))
 anni = 2026 - anno
 print(f"Ciao {nome}! hai {anni} anni!")
 
+
