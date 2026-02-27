@@ -1,0 +1,53 @@
+.benvenuto {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* vh è percentuale dello schermo  */
+    height: 90vh;
+    background-color: aquamarine;
+}
+
+.bio {
+    height: 30vh;
+    display: flex;
+    align-items: center;
+}
+
+.foglio {
+    border: 0.5px solid rgb(60, 60, 60);
+    padding: 5%;
+}
+
+.cv {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+}
+
+.btn {
+    width: auto;
+}
+
+.logo {
+    width: 50%;
+}
+
+footer {
+    background-color: cadetblue;
+    padding: 5vh;
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card {
+  height: 100%;
+}
+
+.card-header, .card-footer {
+    background-color: transparent;
+    border: none;
+}
+
