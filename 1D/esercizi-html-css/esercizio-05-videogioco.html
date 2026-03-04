@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esercizio 5 – Scheda Videogioco</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #0d0d1a;
+      font-family: 'Segoe UI', sans-serif;
+      color: #e0e0e0;
+      padding: 40px 20px;
+    }
+
+    .scheda {
+      max-width: 600px;
+      margin: 0 auto;
+      background: #16213e;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+    }
+
+    /* HERO */
+    .hero {
+      position: relative;
+    }
+
+    .hero img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+
+      /* ERRORE 1 → display ha un valore sbagliato, deve essere "block" */
+      display: bloock;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 20px;
+      background: linear-gradient(transparent, #16213e);
+    }
+
+    .titolo-gioco {
+      font-size: 30px;
+      font-weight: bold;
+      color: white;
+      text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    }
+
+    /* CONTENUTO */
+    .contenuto {
+      /* ERRORE 2 → padding ha un valore non valido: "30px 25" (manca unità su 25) */
+      padding: 30px 25;
+    }
+
+    /* VOTO */
+    .voto-container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .voto {
+      font-size: 48px;
+      font-weight: bold;
+
+      /* ERRORE 3 → il colore è scritto male: manca il # davanti a "e94560" */
+      color: e94560;
+    }
+
+    .voto-label {
+      font-size: 13px;
+      color: #888;
+      line-height: 1.4;
+    }
+
+    .stelle {
+      font-size: 22px;
+      letter-spacing: 2px;
+    }
+
+    /* DESCRIZIONE */
+    .descrizione {
+      font-size: 14px;
+      line-height: 1.7;
+      color: #ccc;
+      margin-bottom: 24px;
+    }
+
+    /* TAG GENERI */
+    .generi {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+
+    .tag {
+      background: #0f3460;
+      color: #7ec8e3;
+      border-radius: 6px;
+      padding: 5px 14px;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* DETTAGLI */
+    .dettagli {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-bottom: 24px;
+    }
+
+    .dettaglio {
+      background: #0f1b35;
+      border-radius: 10px;
+      padding: 14px;
+    }
+
+    .dettaglio-label {
+      font-size: 11px;
+      color: #666;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 4px;
+    }
+
+    .dettaglio-valore {
+      font-size: 15px;
+      font-weight: bold;
+      color: #e0e0e0;
+    }
+
+    /* BOTTONE */
+    .bottone-acquista {
+      display: block;
+      width: 100%;
+      background: #e94560;
+      color: white;
+      border: none;
+      border-radius: 12px;
+      padding: 16px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      text-align: center;
+
+      /* ERRORE 4 → la transizione ha la proprietà sbagliata,
+         deve essere "background-color" non "background-colour" */
+      transition: background-colour 0.3s ease;
+    }
+
+    .bottone-acquista:hover {
+      background: #c73652;
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+  ╔══════════════════════════════════════════════════╗
+  ║         ESERCIZIO 5 – Scheda Videogioco          ║
+  ║              ⭐⭐⭐ Livello: Medio                 ║
+  ╚══════════════════════════════════════════════════╝
+
+  Una scheda per il videogioco "Cyber Protocol".
+  Nel CSS ci sono 4 errori nascosti da trovare e correggere.
+  Poi devi aggiungere una sezione mancante nell'HTML.
+
+  📋 COSA FARE:
+  ─────────────────────────────────────────────────
+  PARTE A – Trova e correggi i 4 errori nel CSS:
+    ERRORE 1 → valore sbagliato in "display"
+    ERRORE 2 → unità di misura mancante in "padding"
+    ERRORE 3 → colore scritto in modo non valido
+    ERRORE 4 → nome proprietà sbagliato in "transition"
+
+  PARTE B – Aggiungi la sezione mancante nell'HTML:
+    TODO 5 → Dopo il div.generi, aggiungi un div.dettagli
+             con 4 dettagli usando la struttura:
+
+    <div class="dettagli">
+      <div class="dettaglio">
+        <p class="dettaglio-label">Sviluppatore</p>
+        <p class="dettaglio-valore">NeonStudio</p>
+      </div>
+      ... (aggiungi anche: Anno: 2024, Piattaforma: PC / Console, Giocatori: Singolo/Multi)
+    </div>
+  ─────────────────────────────────────────────────
+  💡 SUGGERIMENTO: gli errori CSS non danno messaggi
+     di errore visibili, il browser li ignora!
+     Confronta quello che vedi con quello che ti aspetti.
+  -->
+
+  <div class="scheda">
+
+    <div class="hero">
+      <img src="https://picsum.photos/seed/cyberpunk/600/250" alt="Cyber Protocol">
+      <div class="hero-overlay">
+        <h1 class="titolo-gioco">⚡ Cyber Protocol</h1>
+      </div>
+    </div>
+
+    <div class="contenuto">
+
+      <div class="voto-container">
+        <div class="voto">9.2</div>
+        <div class="voto-label">
+          <div class="stelle">★★★★★</div>
+          Basato su 4.821 recensioni
+        </div>
+      </div>
+
+      <p class="descrizione">
+        In un futuro distopico dominato dalle megacorporazioni, sei un hacker
+        ribelle con un unico obiettivo: smantellare il sistema dall'interno.
+        Esplora una città neon vibrante, hackera i sistemi, e scopri la verità
+        nascosta dietro la rete globale di controllo.
+      </p>
+
+      <div class="generi">
+        <span class="tag">Action RPG</span>
+        <span class="tag">Open World</span>
+        <span class="tag">Cyberpunk</span>
+        <span class="tag">Storia</span>
+      </div>
+
+      <!-- TODO 5 → Aggiungi qui il div.dettagli (vedi istruzioni sopra) -->
+
+      <button class="bottone-acquista">🛒 Aggiungi al carrello — €49.99</button>
+
+    </div>
+  </div>
+
+</body>
+</html>

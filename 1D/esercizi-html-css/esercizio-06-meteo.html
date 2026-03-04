@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esercizio 6 – App Meteo</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      background: linear-gradient(135deg, #1a237e 0%, #283593 50%, #1565c0 100%);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .meteo-card {
+      background: rgba(255,255,255,0.12);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 24px;
+      padding: 32px;
+      width: 380px;
+      color: white;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+    }
+
+    /* INTESTAZIONE: città a sinistra, data a destra */
+    .intestazione {
+      /*
+        TODO 1 → Usa flexbox per mettere città e data
+                 sullo stesso riga, uno a sinistra e uno a destra.
+                 Proprietà da aggiungere:
+                 display: flex;
+                 justify-content: ???;   ← cosa metti per distanziarli?
+                 align-items: center;
+      */
+      margin-bottom: 28px;
+    }
+
+    .citta {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .data {
+      font-size: 13px;
+      opacity: 0.7;
+    }
+
+    /* TEMPERATURA PRINCIPALE */
+    .temperatura-principale {
+      /*
+        TODO 2 → Metti l'emoji e la temperatura sulla stessa riga,
+                 centrati, con un gap di 16px.
+                 Proprietà: display, align-items, justify-content, gap
+      */
+      margin-bottom: 8px;
+    }
+
+    .icona-meteo {
+      font-size: 72px;
+      line-height: 1;
+    }
+
+    .gradi {
+      font-size: 80px;
+      font-weight: 100;
+      line-height: 1;
+    }
+
+    .condizione {
+      text-align: center;
+      font-size: 18px;
+      opacity: 0.85;
+      margin-bottom: 28px;
+      font-weight: 300;
+      letter-spacing: 1px;
+    }
+
+    /* DETTAGLI: 3 valori affiancati */
+    .dettagli {
+      /*
+        TODO 3 → I 3 blocchi (percepita, umidità, vento) devono stare
+                 in fila orizzontale, con spazio uguale tra loro.
+                 Proprietà: display, justify-content
+      */
+      background: rgba(255,255,255,0.1);
+      border-radius: 16px;
+      padding: 16px;
+      margin-bottom: 24px;
+    }
+
+    .dettaglio {
+      text-align: center;
+    }
+
+    .dettaglio-valore {
+      font-size: 22px;
+      font-weight: bold;
+      display: block;
+    }
+
+    .dettaglio-label {
+      font-size: 11px;
+      opacity: 0.6;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* PREVISIONI 5 GIORNI */
+    .titolo-previsioni {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      opacity: 0.6;
+      margin-bottom: 12px;
+    }
+
+    .previsioni {
+      /*
+        TODO 4 → Le 5 previsioni devono stare in fila,
+                 distribuite uniformemente.
+                 (stesso layout del .dettagli)
+      */
+    }
+
+    .giorno {
+      text-align: center;
+    }
+
+    .giorno-nome {
+      font-size: 12px;
+      opacity: 0.6;
+      margin-bottom: 6px;
+      display: block;
+    }
+
+    .giorno-icona {
+      font-size: 22px;
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .giorno-temp {
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    .giorno-min {
+      font-size: 12px;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+  ╔══════════════════════════════════════════════════╗
+  ║             ESERCIZIO 6 – App Meteo              ║
+  ║              ⭐⭐⭐ Livello: Medio                 ║
+  ╚══════════════════════════════════════════════════╝
+
+  Una card meteo. L'HTML è completo, ma il layout
+  flexbox è da costruire quasi da zero!
+
+  📋 COSA FARE (tutti nel CSS):
+  ─────────────────────────────────────────────────
+  TODO 1 → .intestazione → flexbox con città e data
+                            ai lati opposti
+
+  TODO 2 → .temperatura-principale → flexbox centrato
+                                      con icona e gradi
+
+  TODO 3 → .dettagli → flexbox con 3 blocchi equidistanti
+
+  TODO 4 → .previsioni → flexbox come .dettagli
+
+  ─────────────────────────────────────────────────
+  🎯 SFIDA EXTRA (facoltativa):
+     Aggiungi una quinta previsione nell'HTML
+     per "Dom" con un'emoji meteo a scelta,
+     temperatura 19° e minima 11°
+  ─────────────────────────────────────────────────
+  💡 SUGGERIMENTO: per distanziare elementi in modo
+     uniforme usa "justify-content: space-around"
+     oppure "space-between". Qual è la differenza?
+  -->
+
+  <div class="meteo-card">
+
+    <div class="intestazione">
+      <span class="citta">📍 Roma, Italia</span>
+      <span class="data">Mer 4 Marzo</span>
+    </div>
+
+    <div class="temperatura-principale">
+      <span class="icona-meteo">⛅</span>
+      <span class="gradi">22°</span>
+    </div>
+
+    <p class="condizione">Parzialmente nuvoloso</p>
+
+    <div class="dettagli">
+      <div class="dettaglio">
+        <span class="dettaglio-valore">19°</span>
+        <span class="dettaglio-label">Percepita</span>
+      </div>
+      <div class="dettaglio">
+        <span class="dettaglio-valore">64%</span>
+        <span class="dettaglio-label">Umidità</span>
+      </div>
+      <div class="dettaglio">
+        <span class="dettaglio-valore">12 km/h</span>
+        <span class="dettaglio-label">Vento</span>
+      </div>
+    </div>
+
+    <p class="titolo-previsioni">Prossimi 5 giorni</p>
+
+    <div class="previsioni">
+      <div class="giorno">
+        <span class="giorno-nome">Gio</span>
+        <span class="giorno-icona">🌤</span>
+        <span class="giorno-temp">24°</span>
+        <span class="giorno-min">14°</span>
+      </div>
+      <div class="giorno">
+        <span class="giorno-nome">Ven</span>
+        <span class="giorno-icona">🌧</span>
+        <span class="giorno-temp">18°</span>
+        <span class="giorno-min">12°</span>
+      </div>
+      <div class="giorno">
+        <span class="giorno-nome">Sab</span>
+        <span class="giorno-icona">⛈</span>
+        <span class="giorno-temp">15°</span>
+        <span class="giorno-min">10°</span>
+      </div>
+      <div class="giorno">
+        <span class="giorno-nome">Dom</span>
+        <span class="giorno-icona">🌈</span>
+        <span class="giorno-temp">20°</span>
+        <span class="giorno-min">13°</span>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

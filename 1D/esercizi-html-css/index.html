@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esercizi HTML & CSS</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f0f1a;
+      color: #e0e0e0;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .intestazione {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .intestazione h1 {
+      font-size: 36px;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .intestazione h1 span { color: #7c6fff; }
+
+    .intestazione p {
+      color: #888;
+      font-size: 15px;
+    }
+
+    .griglia {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #1a1a2e;
+      border: 1px solid #2a2a40;
+      border-radius: 16px;
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, border-color 0.2s;
+      display: block;
+    }
+
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: #7c6fff;
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .numero {
+      font-size: 11px;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .livello {
+      font-size: 12px;
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-weight: bold;
+    }
+
+    .livello.facile     { background: #052e16; color: #4ade80; }
+    .livello.medio      { background: #1c1917; color: #fb923c; }
+    .livello.alto       { background: #2d1515; color: #f87171; }
+
+    .card-titolo {
+      font-size: 17px;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 8px;
+    }
+
+    .card-desc {
+      font-size: 13px;
+      color: #666;
+      line-height: 1.5;
+      margin-bottom: 16px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      font-size: 11px;
+      background: #252540;
+      color: #7c6fff;
+      border-radius: 4px;
+      padding: 3px 8px;
+    }
+
+    .footer-nota {
+      text-align: center;
+      margin-top: 48px;
+      color: #444;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="intestazione">
+    <h1>Esercizi <span>HTML & CSS</span></h1>
+    <p>8 esercizi progressivi — clicca su un esercizio per aprirlo</p>
+  </div>
+
+  <div class="griglia">
+
+    <a class="card" href="esercizio-01-biglietto.html">
+      <div class="card-header">
+        <span class="numero">Esercizio 01</span>
+        <span class="livello facile">⭐ Facile</span>
+      </div>
+      <p class="card-titolo">🪪 Biglietto da visita</p>
+      <p class="card-desc">Il CSS è pronto: aggiungi tutti gli elementi HTML mancanti per costruire il biglietto.</p>
+      <div class="tags"><span class="tag">HTML</span><span class="tag">img</span><span class="tag">paragrafi</span><span class="tag">link</span></div>
+    </a>
+
+    <a class="card" href="esercizio-02-playlist.html">
+      <div class="card-header">
+        <span class="numero">Esercizio 02</span>
+        <span class="livello facile">⭐ Facile</span>
+      </div>
+      <p class="card-titolo">🎵 Playlist musicale</p>
+      <p class="card-desc">L'HTML è completo: riempi i 10 valori CSS mancanti per dare vita alla playlist in stile Spotify.</p>
+      <div class="tags"><span class="tag">CSS</span><span class="tag">colori</span><span class="tag">hover</span><span class="tag">transition</span></div>
+    </a>
+
+    <a class="card" href="esercizio-03-profilo-social.html">
+      <div class="card-header">
+        <span class="numero">Esercizio 03</span>
+        <span class="livello facile">⭐⭐ Facile/Medio</span>
+      </div>
+      <p class="card-titolo">📸 Profilo Social</p>
+      <p class="card-desc">Profilo in stile Instagram: 7 valori CSS da completare + 3 elementi HTML da aggiungere.</p>
+      <div class="tags"><span class="tag">CSS</span><span class="tag">HTML</span><span class="tag">grid</span><span class="tag">flexbox</span></div>
+    </a>
+
+    <a class="card" href="esercizio-04-ricetta.html">
+      <div class="card-header">
+        <span class="numero">Esercizio 04</span>
+        <span class="livello medio">⭐⭐ Medio</span>
+      </div>
+      <p class="card-titolo">🍫 Pagina Ricetta</p>
+      <p class="card-desc">Completa il layout CSS con flexbox e grid, poi aggiungi badge, ingredienti e passaggi mancanti.</p>
+      <div class="tags"><span class="tag">flexbox</span><span class="tag">grid</span><span class="tag">HTML</span><span class="tag">liste</span></div>
+    </a>
+
+    <a class="card" href="esercizio-05-videogioco.html">
+      <div class="card-header">
+        <span class="numero">Esercizio 05</span>
+        <span class="livello medio">⭐⭐⭐ Medio</span>
+      </div>
+      <p class="card-titolo">🎮 Scheda Videogioco</p>
+      <p class="card-desc">Trova e correggi 4 errori nascosti nel CSS, poi aggiungi una sezione mancante nell'HTML.</p>
+      <div class="tags"><span class="tag">debug CSS</span><span class="tag">errori</span><span class="tag">HTML</span></div>
+    </a>
+
+    <a class="card" href="esercizio-06-meteo.html">
+      <div class="card-header">
+        <span class="numero">Esercizio 06</span>
+        <span class="livello medio">⭐⭐⭐ Medio</span>
+      </div>
+      <p class="card-titolo">🌤 App Meteo</p>
+      <p class="card-desc">L'HTML è completo ma il layout flexbox è quasi assente: costruiscilo tu in 4 punti chiave.</p>
+      <div class="tags"><span class="tag">flexbox</span><span class="tag">layout</span><span class="tag">space-around</span></div>
+    </a>
+
+    <a class="card" href="esercizio-07-blog.html">
+      <div class="card-header">
+        <span class="numero">Esercizio 07</span>
+        <span class="livello medio">⭐⭐⭐ Medio/Alto</span>
+      </div>
+      <p class="card-titolo">📰 Articolo di Blog</p>
+      <p class="card-desc">Layout a due colonne con sidebar. Costruisci il layout principale e i micro-layout interni.</p>
+      <div class="tags"><span class="tag">flexbox</span><span class="tag">due colonne</span><span class="tag">sidebar</span><span class="tag">HTML</span></div>
+    </a>
+
+    <a class="card" href="esercizio-08-landing-page.html">
+      <div class="card-header">
+        <span class="numero">Esercizio 08</span>
+        <span class="livello alto">⭐⭐⭐⭐ Alto</span>
+      </div>
+      <p class="card-titolo">🚀 Landing Page</p>
+      <p class="card-desc">Una landing page completa con navbar, hero, features, prezzi e footer. Il più completo di tutti!</p>
+      <div class="tags"><span class="tag">flexbox</span><span class="tag">grid</span><span class="tag">CSS vars</span><span class="tag">HTML completo</span></div>
+    </a>
+
+  </div>
+
+  <p class="footer-nota">Apri i file con il browser — salva le modifiche con Ctrl+S e ricarica con F5</p>
+
+</body>
+</html>

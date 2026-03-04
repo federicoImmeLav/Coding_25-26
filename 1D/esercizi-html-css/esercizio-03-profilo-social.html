@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esercizio 3 – Profilo Social</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background-color: #fafafa;
+      font-family: -apple-system, sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .profilo {
+      background: white;
+      border: 1px solid #dbdbdb;
+      border-radius: 12px;
+      width: 380px;
+      overflow: hidden;
+    }
+
+    /* --- COPERTINA --- */
+    .copertina {
+      width: 100%;
+      height: 130px;
+      object-fit: cover;
+
+      /* TODO 1 → display: block  (per eliminare lo spazio sotto l'immagine) */
+      display: ;
+    }
+
+    /* --- SEZIONE AVATAR --- */
+    .sezione-avatar {
+      padding: 0 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      margin-top: -36px;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      border: 4px solid white;
+      object-fit: cover;
+    }
+
+    .bottone-segui {
+      background-color: #0095f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      padding: 8px 20px;
+      font-weight: bold;
+      font-size: 14px;
+      cursor: pointer;
+
+      /* TODO 2 → aggiungi: margin-bottom: 8px  */
+
+    }
+
+    /* --- INFO PROFILO --- */
+    .info {
+      padding: 12px 20px 20px;
+    }
+
+    .nome-utente {
+      font-weight: bold;
+      font-size: 16px;
+      color: #111;
+      margin-bottom: 2px;
+
+      /* TODO 3 → aggiungi: display: block */
+
+    }
+
+    .bio {
+      font-size: 14px;
+      color: #444;
+      margin: 6px 0 16px;
+      line-height: 1.5;
+    }
+
+    /* --- STATISTICHE --- */
+    .statistiche {
+      display: flex;
+
+      /* TODO 4 → spazio tra i 3 blocchi: justify-content: space-around */
+      justify-content: ;
+
+      border-top: 1px solid #efefef;
+      border-bottom: 1px solid #efefef;
+      padding: 14px 0;
+      margin-bottom: 16px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-numero {
+      font-size: 18px;
+      font-weight: bold;
+      color: #111;
+
+      /* TODO 5 → display: block (per far andare il numero su una riga propria) */
+      display: ;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: #888;
+    }
+
+    /* --- GRIGLIA FOTO --- */
+    .griglia {
+      display: grid;
+
+      /* TODO 6 → griglia a 3 colonne uguali: grid-template-columns: repeat(3, 1fr) */
+      grid-template-columns: ;
+
+      gap: 3px;
+    }
+
+    .griglia img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+
+      /* TODO 7 → display: block */
+      display: ;
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+  ╔══════════════════════════════════════════════════╗
+  ║          ESERCIZIO 3 – Profilo Social            ║
+  ║              ⭐⭐ Livello: Facile/Medio           ║
+  ╚══════════════════════════════════════════════════╝
+
+  Un profilo in stile Instagram. Alcune parti dell'HTML
+  sono mancanti E alcuni valori CSS sono da completare.
+
+  📋 COSA FARE:
+  ─────────────────────────────────────────────────
+  CSS (cerca i TODO nel <style>):
+    TODO 1 → display della copertina
+    TODO 2 → margin-bottom del bottone
+    TODO 3 → display del nome utente
+    TODO 4 → justify-content delle statistiche
+    TODO 5 → display del numero statistica
+    TODO 6 → grid-template-columns della griglia
+    TODO 7 → display delle immagini griglia
+
+  HTML (cerca i TODO nel <body>):
+    TODO 8 → aggiungi l'immagine copertina
+    TODO 9 → aggiungi il testo della bio
+    TODO 10 → aggiungi la terza foto nella griglia
+  ─────────────────────────────────────────────────
+  💡 SUGGERIMENTO: fai prima i TODO del CSS, poi
+     guarda come cambia la pagina con i TODO HTML!
+  -->
+
+  <div class="profilo">
+
+    <!-- TODO 8 → Inserisci qui l'immagine di copertina
+         <img class="copertina"
+              src="https://picsum.photos/seed/cover/400/130"
+              alt="Copertina"> -->
+
+    <div class="sezione-avatar">
+      <img class="avatar"
+           src="https://i.pravatar.cc/150?img=47"
+           alt="Avatar">
+      <button class="bottone-segui">Segui</button>
+    </div>
+
+    <div class="info">
+      <span class="nome-utente">sara_fotografa</span>
+
+      <!-- TODO 9 → Sostituisci questo commento con un paragrafo <p class="bio">
+           con il testo: "📸 Amo fotografare il mondo · Milano 🇮🇹 · Sognatrice per natura" -->
+
+      <div class="statistiche">
+        <div class="stat">
+          <span class="stat-numero">142</span>
+          <span class="stat-label">post</span>
+        </div>
+        <div class="stat">
+          <span class="stat-numero">3.4K</span>
+          <span class="stat-label">follower</span>
+        </div>
+        <div class="stat">
+          <span class="stat-numero">289</span>
+          <span class="stat-label">seguiti</span>
+        </div>
+      </div>
+
+      <div class="griglia">
+        <img src="https://picsum.photos/seed/a1/150" alt="foto 1">
+        <img src="https://picsum.photos/seed/a2/150" alt="foto 2">
+
+        <!-- TODO 10 → Aggiungi una terza immagine uguale alle prime
+             (cambia il seed in "a3") -->
+
+        <img src="https://picsum.photos/seed/a4/150" alt="foto 4">
+        <img src="https://picsum.photos/seed/a5/150" alt="foto 5">
+        <img src="https://picsum.photos/seed/a6/150" alt="foto 6">
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>

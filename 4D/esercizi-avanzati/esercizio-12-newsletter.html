@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esercizio 12 – Newsletter</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #e8eaf0;
+      font-family: Georgia, 'Times New Roman', serif;
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    /* WRAPPER EMAIL */
+    .email-wrapper {
+      max-width: 600px;
+      margin: 0 auto;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    }
+
+    /* ── HEADER ── */
+    .email-header {
+      background: #1a1a2e;
+
+      /*
+        TODO 1 → Il testo nell'header deve avere spazio interno.
+                 Aggiungi: padding: 32px 40px
+      */
+
+      text-align: center;
+    }
+
+    .header-logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: white;
+      letter-spacing: -1px;
+      font-family: 'Segoe UI', sans-serif;
+
+      /*
+        TODO 2 → Aggiungi spazio sotto il logo prima del sottotitolo.
+                 margin-bottom: 6px
+      */
+    }
+
+    .header-logo span { color: #7c6fff; }
+
+    .header-sottotitolo {
+      font-size: 12px;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* ── HERO ARTICOLO PRINCIPALE ── */
+    .hero-articolo img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .hero-articolo .contenuto {
+      /*
+        TODO 3 → Spazio interno: padding: 32px 40px
+      */
+    }
+
+    .categoria-tag {
+      display: inline-block;
+      background: #7c6fff;
+      color: white;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 4px 12px;
+      border-radius: 3px;
+      font-family: 'Segoe UI', sans-serif;
+
+      /*
+        TODO 4 → Spazio sotto il tag: margin-bottom: 16px
+      */
+    }
+
+    .hero-titolo {
+      font-size: 26px;
+      line-height: 1.3;
+      color: #1a1a2e;
+
+      /*
+        TODO 5 → Spazio sotto: margin-bottom: 12px
+      */
+    }
+
+    .hero-testo {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #555;
+
+      /*
+        TODO 6 → Spazio sotto: margin-bottom: 24px
+      */
+    }
+
+    .btn-leggi {
+      display: inline-block;
+      background: #1a1a2e;
+      color: white;
+      text-decoration: none;
+      font-family: 'Segoe UI', sans-serif;
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+
+      /*
+        TODO 7 → Spazio interno al bottone: padding: 12px 28px
+      */
+
+      border-radius: 4px;
+    }
+
+    /* ── DIVISORE ── */
+    .divisore {
+      /*
+        TODO 8 → Il divisore deve avere:
+                 margin: 0 40px   (spazio laterale, non tocca i bordi)
+                 border: none
+                 border-top: 1px solid #eee
+      */
+    }
+
+    /* ── SEZIONE ARTICOLI SECONDARI ── */
+    .articoli-secondari {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      /*
+        TODO 9 → Spazio interno: padding: 32px 40px
+                 Spazio tra le card: gap: 24px
+      */
+    }
+
+    .card-secondaria img {
+      width: 100%;
+      height: 140px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+
+      /*
+        TODO 10 → Spazio sotto l'immagine: margin-bottom: 12px
+      */
+    }
+
+    .card-secondaria .cat {
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #7c6fff;
+      font-family: 'Segoe UI', sans-serif;
+
+      /*
+        TODO 11 → margin-bottom: 6px
+      */
+    }
+
+    .card-secondaria h3 {
+      font-size: 16px;
+      line-height: 1.3;
+      color: #1a1a2e;
+
+      /*
+        TODO 12 → margin-bottom: 8px
+      */
+    }
+
+    .card-secondaria p {
+      font-size: 13px;
+      color: #777;
+      line-height: 1.5;
+    }
+
+    /* ── CITAZIONE ── */
+    .citazione-box {
+      background: #f8f7ff;
+
+      /*
+        TODO 13 → Aggiungi:
+                  margin: 0 40px 32px
+                  padding: 28px 32px
+                  border-left: 4px solid #7c6fff
+                  border-radius: 0 8px 8px 0
+      */
+    }
+
+    .citazione-box blockquote {
+      font-size: 18px;
+      font-style: italic;
+      color: #333;
+      line-height: 1.6;
+
+      /*
+        TODO 14 → margin-bottom: 12px
+      */
+    }
+
+    .citazione-box cite {
+      font-size: 13px;
+      color: #999;
+      font-style: normal;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* ── FOOTER ── */
+    .email-footer {
+      background: #1a1a2e;
+      text-align: center;
+
+      /*
+        TODO 15 → padding: 28px 40px
+      */
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+
+      /*
+        TODO 16 → margin-bottom: 16px
+      */
+    }
+
+    .footer-social a {
+      display: inline-block;
+      width: 36px;
+      height: 36px;
+      background: rgba(255,255,255,0.1);
+      border-radius: 50%;
+      line-height: 36px;
+      text-align: center;
+      font-size: 16px;
+      text-decoration: none;
+      transition: background 0.2s;
+    }
+
+    .footer-social a:hover { background: rgba(255,255,255,0.2); }
+
+    .footer-testo {
+      font-size: 12px;
+      color: rgba(255,255,255,0.3);
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+  ╔══════════════════════════════════════════════════╗
+  ║           ESERCIZIO 12 – Newsletter Email        ║
+  ║              ⭐⭐⭐ Livello: Medio                 ║
+  ╚══════════════════════════════════════════════════╝
+
+  Una newsletter in HTML. L'HTML è completo, ma
+  mancano TUTTI i valori di padding, margin e border.
+  Questo esercizio serve a capire il "box model"!
+
+  📋 COSA FARE (CSS — 16 TODO da completare):
+  ─────────────────────────────────────────────────
+  Ogni TODO riguarda padding, margin o border.
+  Leggi attentamente: capire la differenza tra questi
+  tre è fondamentale!
+
+  RICORDA:
+  ┌─────────────────────────────────────┐
+  │  MARGIN  (spazio esterno)           │
+  │  ┌───────────────────────────────┐  │
+  │  │  BORDER  (bordo)              │  │
+  │  │  ┌─────────────────────────┐  │  │
+  │  │  │  PADDING  (spazio int.) │  │  │
+  │  │  │  ┌───────────────────┐  │  │  │
+  │  │  │  │   CONTENUTO       │  │  │  │
+  │  │  │  └───────────────────┘  │  │  │
+  │  │  └─────────────────────────┘  │  │
+  │  └───────────────────────────────┘  │
+  └─────────────────────────────────────┘
+
+  📋 COSA FARE (HTML):
+  ─────────────────────────────────────────────────
+  TODO 17 → Aggiungi una terza card secondaria
+             nella sezione .articoli-secondari.
+             (Nota: la griglia ha 2 colonne, quindi
+             la terza andrà su una nuova riga.)
+
+             Usa seed "news3" per l'immagine,
+             categoria "Cultura", titolo e testo a piacere.
+  ─────────────────────────────────────────────────
+  💡 SUGGERIMENTO: apri gli strumenti sviluppatore
+     del browser (F12), clicca su un elemento e
+     guarda il "box model" nel pannello CSS —
+     vedrai esattamente margin, border e padding!
+  -->
+
+  <div class="email-wrapper">
+
+    <!-- HEADER -->
+    <div class="email-header">
+      <p class="header-logo">La<span>Rassegna</span></p>
+      <p class="header-sottotitolo">La newsletter del Mercoledì</p>
+    </div>
+
+    <!-- ARTICOLO PRINCIPALE -->
+    <div class="hero-articolo">
+      <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?w=600&q=80" alt="Spazio">
+      <div class="contenuto">
+        <span class="categoria-tag">Scienza</span>
+        <h2 class="hero-titolo">Nuove scoperte sull'oceano nascosto sotto la crosta di Europa</h2>
+        <p class="hero-testo">
+          I dati della sonda Juno hanno rivelato dettagli senza precedenti
+          sull'oceano salato che si nasconde sotto la superficie ghiacciata
+          della luna di Giove. I ricercatori parlano di condizioni potenzialmente
+          compatibili con forme di vita microbica.
+        </p>
+        <a href="#" class="btn-leggi">Leggi l'articolo →</a>
+      </div>
+    </div>
+
+    <hr class="divisore">
+
+    <!-- ARTICOLI SECONDARI -->
+    <div class="articoli-secondari">
+
+      <div class="card-secondaria">
+        <img src="https://picsum.photos/seed/news1/300/140" alt="Economia">
+        <p class="cat">Economia</p>
+        <h3>L'euro digitale: cosa cambia per i cittadini</h3>
+        <p>La BCE accelera i tempi: entro il 2027 potremmo avere la valuta digitale ufficiale dell'Unione Europea.</p>
+      </div>
+
+      <div class="card-secondaria">
+        <img src="https://picsum.photos/seed/news2/300/140" alt="Tecnologia">
+        <p class="cat">Tecnologia</p>
+        <h3>I nuovi chip biologici che imitano il cervello</h3>
+        <p>Un team di ricercatori ha sviluppato processori neuromorfi capaci di apprendere consumando 1000 volte meno energia.</p>
+      </div>
+
+      <!-- TODO 17 → Aggiungi qui la terza card secondaria -->
+
+    </div>
+
+    <!-- CITAZIONE -->
+    <div class="citazione-box">
+      <blockquote>"L'universo non è solo più strano di quanto immaginiamo, ma più strano di quanto possiamo immaginare."</blockquote>
+      <cite>— J.B.S. Haldane, biologo</cite>
+    </div>
+
+    <!-- FOOTER -->
+    <div class="email-footer">
+      <div class="footer-social">
+        <a href="#">𝕏</a>
+        <a href="#">in</a>
+        <a href="#">📧</a>
+      </div>
+      <p class="footer-testo">
+        Hai ricevuto questa email perché sei iscritto a LaRassegna.<br>
+        <a href="#" style="color:#7c6fff;">Gestisci preferenze</a> · <a href="#" style="color:#7c6fff;">Cancella iscrizione</a>
+      </p>
+    </div>
+
+  </div>
+
+</body>
+</html>

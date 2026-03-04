@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esercizi Avanzati HTML & CSS</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #0a0a12;
+      color: #e0e0e0;
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+
+    .intestazione {
+      text-align: center;
+      margin-bottom: 12px;
+    }
+
+    .intestazione h1 { font-size: 36px; color: white; margin-bottom: 8px; }
+    .intestazione h1 span { color: #c8a96e; }
+    .intestazione p { color: #555; font-size: 14px; margin-bottom: 4px; }
+
+    .badge-livello-header {
+      display: inline-block;
+      background: #2d1515;
+      color: #f87171;
+      border-radius: 20px;
+      padding: 4px 14px;
+      font-size: 12px;
+      font-weight: bold;
+      margin: 12px auto 36px;
+    }
+
+    .griglia {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #13131f;
+      border: 1px solid #1e1e30;
+      border-radius: 16px;
+      padding: 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 0.2s, border-color 0.2s;
+      display: block;
+    }
+
+    .card:hover { transform: translateY(-4px); border-color: #c8a96e; }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 12px;
+    }
+
+    .numero { font-size: 11px; color: #444; text-transform: uppercase; letter-spacing: 2px; }
+
+    .livello {
+      font-size: 11px;
+      border-radius: 20px;
+      padding: 3px 10px;
+      font-weight: bold;
+    }
+
+    .livello.medio      { background: #1c1917; color: #fb923c; }
+    .livello.alto       { background: #2d1515; color: #f87171; }
+
+    .card-titolo { font-size: 17px; font-weight: bold; color: white; margin-bottom: 8px; }
+    .card-desc { font-size: 13px; color: #555; line-height: 1.5; margin-bottom: 16px; }
+    .card-concetti { font-size: 12px; color: #c8a96e; font-style: italic; }
+
+    .footer-nota {
+      text-align: center;
+      margin-top: 48px;
+      color: #333;
+      font-size: 13px;
+    }
+
+    .link-pack1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .link-pack1 a {
+      color: #555;
+      font-size: 13px;
+      text-decoration: none;
+    }
+
+    .link-pack1 a:hover { color: #888; }
+  </style>
+</head>
+<body>
+
+  <div class="intestazione">
+    <h1>Esercizi <span>Avanzati</span></h1>
+    <p>Pack 2 — HTML & CSS</p>
+    <div class="badge-livello-header">⭐⭐⭐ Medio → Alto</div>
+  </div>
+
+  <div class="griglia">
+
+    
+
+    <a class="card" href="esercizio-12-newsletter.html">
+      <div class="card-header">
+        <span class="numero">Esercizio 12</span>
+        <span class="livello medio">⭐⭐⭐ Medio</span>
+      </div>
+      <p class="card-titolo">📧 Newsletter Email</p>
+      <p class="card-desc">16 TODO tutti su padding, margin e border. Ideale per capire il box model CSS in modo concreto e visivo.</p>
+      <p class="card-concetti">🧠 box model · padding · margin · border</p>
+    </a>
+
+    <a class="card" href="esercizio-13-shop.html">
+      <div class="card-header">
+        <span class="numero">Esercizio 13</span>
+        <span class="livello alto">⭐⭐⭐⭐ Alto</span>
+      </div>
+      <p class="card-titolo">🛍 Shop Online</p>
+      <p class="card-desc">Negozio con CSS Variables, hover avanzati con selettori composti (card:hover img) e pseudo-classi su più elementi.</p>
+      <p class="card-concetti">🧠 CSS variables · :hover selettori composti · :active</p>
+    </a>
+
+    
+
+    <a class="card" href="esercizio-15-login.html">
+      <div class="card-header">
+        <span class="numero">Esercizio 15</span>
+        <span class="livello alto">⭐⭐⭐⭐ Alto</span>
+      </div>
+      <p class="card-titolo">🔐 Pagina Login</p>
+      <p class="card-desc">Form di login professionale. Focus su :focus, :hover, :active per gli input e i bottoni. Come si fa davvero!</p>
+      <p class="card-concetti">🧠 :focus · :active · :hover · form styling · pseudo-classi</p>
+    </a>
+
+    <a class="card" href="esercizio-16-ticket.html">
+      <div class="card-header">
+        <span class="numero">Esercizio 16</span>
+        <span class="livello alto">⭐⭐⭐⭐ Alto</span>
+      </div>
+      <p class="card-titolo">🎫 Ticket Evento</p>
+      <p class="card-desc">Pagina con 4 animazioni CSS diverse: dissolvenza, lampeggio, pulsazione con delay a cascata, stelle cadenti.</p>
+      <p class="card-concetti">🧠 @keyframes · animation · animation-delay · forwards/infinite</p>
+    </a>
+
+  </div>
+
+  <div class="link-pack1">
+    <a href="#">← Torna al Pack 1 (livello Facile/Medio)</a>
+  </div>
+
+  <p class="footer-nota">F12 → Strumenti sviluppatore · Ctrl+S per salvare · F5 per ricaricare</p>
+
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esercizio 7 – Articolo Blog</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #f5f5f0;
+      font-family: 'Georgia', serif;
+      color: #333;
+      padding: 40px 20px;
+    }
+
+    /* HEADER SITO */
+    .header-sito {
+      max-width: 960px;
+      margin: 0 auto 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 20px;
+      border-bottom: 2px solid #333;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      letter-spacing: -1px;
+    }
+
+    .nav {
+      display: flex;
+      gap: 24px;
+      list-style: none;
+    }
+
+    .nav a {
+      text-decoration: none;
+      color: #555;
+      font-size: 14px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .nav a:hover { color: #000; }
+
+    /* LAYOUT PRINCIPALE: articolo + sidebar affiancati */
+    .layout {
+      max-width: 960px;
+      margin: 0 auto;
+
+      /*
+        TODO 1 → Usa flexbox per affiancare .articolo e .sidebar
+                 gap tra loro: 40px
+      */
+    }
+
+    /* ARTICOLO */
+    .articolo {
+      /*
+        TODO 2 → L'articolo deve occupare 2/3 dello spazio.
+                 Usa: flex: 2;
+                 (la sidebar userà flex: 1)
+      */
+    }
+
+    .tag-categoria {
+      display: inline-block;
+      background: #333;
+      color: white;
+      font-size: 11px;
+      font-family: 'Segoe UI', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      padding: 4px 12px;
+      border-radius: 3px;
+      margin-bottom: 16px;
+    }
+
+    .titolo-articolo {
+      font-size: 36px;
+      line-height: 1.2;
+      margin-bottom: 12px;
+      color: #111;
+    }
+
+    .meta {
+      font-size: 13px;
+      color: #888;
+      font-family: 'Segoe UI', sans-serif;
+      margin-bottom: 24px;
+      display: flex;
+      gap: 20px;
+    }
+
+    .immagine-articolo {
+      width: 100%;
+      height: 320px;
+      object-fit: cover;
+      border-radius: 8px;
+      display: block;
+      margin-bottom: 28px;
+    }
+
+    .testo p {
+      font-size: 16px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      color: #444;
+    }
+
+    .testo h2 {
+      font-size: 22px;
+      margin: 28px 0 12px;
+      color: #111;
+    }
+
+    .citazione {
+      border-left: 4px solid #333;
+      padding: 16px 24px;
+      background: white;
+      margin: 28px 0;
+      font-style: italic;
+      font-size: 18px;
+      color: #555;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* SIDEBAR */
+    .sidebar {
+      /*
+        TODO 3 → La sidebar deve occupare 1/3 dello spazio.
+                 Usa: flex: 1;
+      */
+    }
+
+    .widget {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 24px;
+    }
+
+    .widget-titolo {
+      font-size: 13px;
+      font-family: 'Segoe UI', sans-serif;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #999;
+      margin-bottom: 16px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #eee;
+    }
+
+    /* Articoli correlati nella sidebar */
+    .correlato {
+      /*
+        TODO 4 → Ogni articolo correlato ha immagine + testo affiancati.
+                 Usa flexbox con gap: 12px
+                 e align-items: center
+      */
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .correlato:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .correlato img {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 6px;
+      flex-shrink: 0;
+    }
+
+    .correlato-testo {
+      font-size: 13px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .correlato-testo strong {
+      display: block;
+      margin-bottom: 4px;
+      color: #222;
+      line-height: 1.3;
+    }
+
+    .correlato-testo span {
+      color: #999;
+      font-size: 11px;
+    }
+
+    /* Tag cloud */
+    .tag-cloud {
+      /*
+        TODO 5 → I tag devono andare a capo se non ci stanno.
+                 Usa flexbox con: flex-wrap: wrap; gap: 8px;
+      */
+    }
+
+    .tag-cloud span {
+      background: #f0f0f0;
+      color: #555;
+      border-radius: 4px;
+      padding: 5px 12px;
+      font-size: 12px;
+      font-family: 'Segoe UI', sans-serif;
+      cursor: pointer;
+    }
+
+    .tag-cloud span:hover {
+      background: #333;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+  ╔══════════════════════════════════════════════════╗
+  ║           ESERCIZIO 7 – Articolo di Blog         ║
+  ║              ⭐⭐⭐ Livello: Medio/Alto            ║
+  ╚══════════════════════════════════════════════════╝
+
+  Un articolo di blog con sidebar laterale.
+  Devi costruire il layout flexbox in più punti.
+
+  📋 COSA FARE (tutti nel CSS):
+  ─────────────────────────────────────────────────
+  TODO 1 → .layout → flexbox con gap 40px
+  TODO 2 → .articolo → flex: 2 (occupa 2/3)
+  TODO 3 → .sidebar → flex: 1 (occupa 1/3)
+  TODO 4 → .correlato → flexbox per affiancare img e testo
+  TODO 5 → .tag-cloud → flexbox con wrap
+
+  📋 COSA FARE (nell'HTML):
+  ─────────────────────────────────────────────────
+  TODO 6 → Nel widget "Chi siamo" aggiungi:
+            - un'immagine rotonda (usa i.pravatar.cc)
+            - un paragrafo con la bio dell'autore
+
+  TODO 7 → Aggiungi un terzo articolo correlato
+            nella sidebar (copia la struttura degli altri 2)
+  ─────────────────────────────────────────────────
+  💡 SUGGERIMENTO: flex:2 e flex:1 dividono lo spazio
+     in proporzione — 2 parti all'articolo, 1 alla sidebar.
+  -->
+
+  <header class="header-sito">
+    <div class="logo">✦ TechBlog</div>
+    <ul class="nav">
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Tecnologia</a></li>
+      <li><a href="#">Scienza</a></li>
+      <li><a href="#">Chi siamo</a></li>
+    </ul>
+  </header>
+
+  <div class="layout">
+
+    <!-- ARTICOLO PRINCIPALE -->
+    <main class="articolo">
+      <span class="tag-categoria">Tecnologia</span>
+      <h1 class="titolo-articolo">Come l'Intelligenza Artificiale sta cambiando il modo in cui impariamo</h1>
+
+      <div class="meta">
+        <span>✍️ Marco Bianchi</span>
+        <span>📅 4 marzo 2026</span>
+        <span>⏱ 5 min di lettura</span>
+      </div>
+
+      <img class="immagine-articolo"
+           src="https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=700&q=80"
+           alt="Intelligenza Artificiale">
+
+      <div class="testo">
+        <p>L'intelligenza artificiale sta rivoluzionando il mondo dell'educazione a una velocità che pochi avrebbero previsto anche solo cinque anni fa. Dagli assistenti virtuali che rispondono alle domande degli studenti, ai sistemi che personalizzano i percorsi di apprendimento, la tecnologia sta ridefinendo cosa significa "studiare".</p>
+
+        <h2>Apprendimento personalizzato</h2>
+        <p>Uno dei cambiamenti più significativi riguarda la personalizzazione. I sistemi di AI possono analizzare come ogni studente impara, quali argomenti gli riescono difficili, a che ora del giorno è più concentrato, e adattare i materiali di conseguenza. Non più lezioni uguali per tutti.</p>
+
+        <div class="citazione">
+          "Non stiamo sostituendo gli insegnanti — stiamo dando loro superpoteri."
+        </div>
+
+        <h2>Sfide e preoccupazioni</h2>
+        <p>Non tutto è rosa e fiori. L'uso dell'AI nelle scuole solleva questioni importanti: la privacy dei dati degli studenti, il rischio che gli algoritmi perpetuino bias esistenti, e la preoccupazione che i ragazzi perdano la capacità di pensare autonomamente se si affidano troppo alle macchine.</p>
+
+        <p>La chiave, secondo molti esperti, sta nell'usare l'AI come strumento di supporto — non come sostituto del pensiero critico. Un martello non costruisce case da solo: dipende sempre da chi lo impugna.</p>
+      </div>
+    </main>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <!-- Widget: Chi siamo -->
+      <div class="widget">
+        <p class="widget-titolo">L'autore</p>
+
+        <!-- TODO 6 → Aggiungi qui:
+             1. <img> rotonda con class="avatar" stile:
+                width:70px; height:70px; border-radius:50%;
+                object-fit:cover; margin-bottom:12px;
+                src="https://i.pravatar.cc/150?img=68"
+
+             2. <p> con la bio:
+                "Marco è giornalista tech con 10 anni di esperienza.
+                Scrive di AI, futuro del lavoro e innovazione digitale." -->
+
+      </div>
+
+      <!-- Widget: Articoli correlati -->
+      <div class="widget">
+        <p class="widget-titolo">Potrebbe interessarti</p>
+
+        <div class="correlato">
+          <img src="https://picsum.photos/seed/art1/60" alt="Articolo 1">
+          <div class="correlato-testo">
+            <strong>5 strumenti AI per studiare meglio</strong>
+            <span>2 marzo 2026</span>
+          </div>
+        </div>
+
+        <div class="correlato">
+          <img src="https://picsum.photos/seed/art2/60" alt="Articolo 2">
+          <div class="correlato-testo">
+            <strong>Il futuro delle università nell'era digitale</strong>
+            <span>28 feb 2026</span>
+          </div>
+        </div>
+
+        <!-- TODO 7 → Aggiungi un terzo articolo correlato:
+             img src: https://picsum.photos/seed/art3/60
+             titolo: "Chatbot e didattica: cosa funziona davvero"
+             data: "20 feb 2026" -->
+
+      </div>
+
+      <!-- Widget: Tag -->
+      <div class="widget">
+        <p class="widget-titolo">Argomenti</p>
+        <div class="tag-cloud">
+          <span>Intelligenza Artificiale</span>
+          <span>Scuola</span>
+          <span>Futuro</span>
+          <span>Tecnologia</span>
+          <span>Studenti</span>
+          <span>Innovazione</span>
+          <span>Machine Learning</span>
+          <span>Digitale</span>
+        </div>
+      </div>
+
+    </aside>
+  </div>
+
+</body>
+</html>

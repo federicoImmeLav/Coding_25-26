@@ -1,0 +1,77 @@
+/* seleziono il contenitore del menu e lo personalizzo */
+header {
+    display: flex;
+    /* allineao in orizzontale */
+    justify-content: space-around; 
+    /* allineo in verticale */
+    align-items: center;
+    /* spazio ai lati */
+    padding-left: 20vh;
+    padding-right: 20vh;
+    /* altezza */
+    height: 4vh;
+}
+
+/* personalizzo le scritte dei link */
+a {
+    font-family: sans-serif;
+    /* colore */
+    color: black;
+    /* tolgo la sottolineatura */
+    text-decoration: none;
+    /* dimensione del font */
+    font-size: small;
+}
+
+/* imposto lo sfondo della sezione con gli iphone */
+.iphone {
+    /* immagine di sfondo */
+    background-image: url("./img/image\ 3.png");
+    background-size: cover;
+    height: 90vh;
+}
+
+/* personalizzo il pulsante con il bordo blu */
+.bordo {
+    font-family: sans-serif;
+    border: 1px solid blue;
+    color: blue;
+    /* bordi arrotondati */
+    border-radius: 50px;
+    padding: 10px 30px;
+}
+
+.sfondo {
+    font-family: sans-serif;
+    border: 1px solid blue;
+    background-color: blue;
+    color: white;
+    /* bordi arrotondati */
+    border-radius: 50px;
+    padding: 10px 30px;
+}
+
+.sottotitolo {
+    font-family: sans-serif;
+    font-size: medium;
+    text-align: center;
+}
+
+h2 {
+    font-family: sans-serif;
+    font-size: 5vh;
+    font-weight: normal;
+    margin: 0;
+    text-align: center;
+}
+
+.pulsanti {
+    text-align: center;
+}
+
+/* metto il contenitore blocco in centro */
+.blocco {
+    width: 50%;
+    margin: auto;
+    padding-top: 10vh;
+}

@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esercizio 8 – Landing Page</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primario: #6c3fff;
+      --secondario: #ff6b6b;
+      --scuro: #0f0e17;
+      --testo: #2d2d44;
+      --chiaro: #f8f7ff;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      color: var(--testo);
+      background: var(--chiaro);
+    }
+
+    /* ═══════════════════════════════════
+       NAVBAR
+    ═══════════════════════════════════ */
+    .navbar {
+      background: var(--scuro);
+      padding: 0 40px;
+      height: 64px;
+
+      /*
+        TODO 1 → La navbar deve avere logo a sinistra e nav a destra,
+                 tutto verticalmente centrato.
+                 Proprietà da aggiungere:
+                 display: flex;
+                 justify-content: ???;
+                 align-items: ???;
+      */
+    }
+
+    .navbar-logo {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      letter-spacing: -0.5px;
+    }
+
+    .navbar-logo span { color: var(--primario); }
+
+    .navbar-nav {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .navbar-nav a {
+      color: rgba(255,255,255,0.7);
+      text-decoration: none;
+      font-size: 14px;
+      transition: color 0.2s;
+    }
+
+    .navbar-nav a:hover { color: white; }
+
+    /* ═══════════════════════════════════
+       HERO
+    ═══════════════════════════════════ */
+    .hero {
+      background: var(--scuro);
+      padding: 80px 40px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(108,63,255,0.3) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(108,63,255,0.2);
+      color: #a78bfa;
+      border: 1px solid rgba(108,63,255,0.4);
+      border-radius: 30px;
+      padding: 6px 20px;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 {
+      font-size: 52px;
+      color: white;
+      line-height: 1.15;
+      margin-bottom: 20px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero h1 span { color: var(--primario); }
+
+    .hero p {
+      font-size: 18px;
+      color: rgba(255,255,255,0.6);
+      max-width: 520px;
+      margin: 0 auto 36px;
+      line-height: 1.6;
+    }
+
+    .hero-bottoni {
+      /*
+        TODO 2 → I due bottoni devono stare affiancati, centrati,
+                 con gap di 16px.
+      */
+    }
+
+    .btn-primario {
+      background: var(--primario);
+      color: white;
+      padding: 14px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 15px;
+      display: inline-block;
+      transition: opacity 0.2s;
+    }
+
+    .btn-primario:hover { opacity: 0.85; }
+
+    .btn-secondario {
+      background: transparent;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 10px;
+      text-decoration: none;
+      font-size: 15px;
+      border: 1px solid rgba(255,255,255,0.3);
+      display: inline-block;
+      transition: border-color 0.2s;
+    }
+
+    .btn-secondario:hover { border-color: white; }
+
+    /* ═══════════════════════════════════
+       SEZIONE FEATURES
+    ═══════════════════════════════════ */
+    .features {
+      padding: 80px 40px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .sezione-titolo {
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .sezione-titolo h2 {
+      font-size: 36px;
+      color: var(--scuro);
+      margin-bottom: 12px;
+    }
+
+    .sezione-titolo p {
+      color: #666;
+      font-size: 16px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .features-griglia {
+      display: grid;
+
+      /*
+        TODO 3 → La griglia delle feature deve avere 3 colonne uguali,
+                 con gap di 24px.
+                 grid-template-columns: ???
+                 gap: ???
+      */
+    }
+
+    .feature-card {
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+      border: 1px solid #eee;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+    }
+
+    .feature-icona {
+      font-size: 36px;
+      margin-bottom: 16px;
+      display: block;
+    }
+
+    .feature-titolo {
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--scuro);
+      margin-bottom: 10px;
+    }
+
+    .feature-testo {
+      font-size: 14px;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* ═══════════════════════════════════
+       SEZIONE PREZZI
+    ═══════════════════════════════════ */
+    .prezzi {
+      background: var(--scuro);
+      padding: 80px 40px;
+    }
+
+    .prezzi .sezione-titolo h2 { color: white; }
+    .prezzi .sezione-titolo p { color: rgba(255,255,255,0.5); }
+
+    .prezzi-griglia {
+      max-width: 900px;
+      margin: 0 auto;
+
+      /*
+        TODO 4 → 3 card prezzi affiancate, centrate, gap 24px.
+                 Usa display: flex, justify-content: center, gap: 24px
+      */
+    }
+
+    .prezzo-card {
+      background: #1a1a2e;
+      border-radius: 20px;
+      padding: 32px;
+      width: 260px;
+      border: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .prezzo-card.popolare {
+      border-color: var(--primario);
+      background: #1f1340;
+      position: relative;
+    }
+
+    .badge-popolare {
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--primario);
+      color: white;
+      font-size: 11px;
+      font-weight: bold;
+      padding: 4px 16px;
+      border-radius: 20px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+
+    .prezzo-piano {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #888;
+      margin-bottom: 16px;
+    }
+
+    .prezzo-card.popolare .prezzo-piano { color: #a78bfa; }
+
+    .prezzo-importo {
+      font-size: 48px;
+      font-weight: bold;
+      color: white;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .prezzo-periodo {
+      color: #555;
+      font-size: 13px;
+      margin-bottom: 28px;
+    }
+
+    .prezzo-lista {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 28px;
+    }
+
+    .prezzo-lista li {
+      color: rgba(255,255,255,0.7);
+      font-size: 13px;
+      padding: 6px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      display: flex;
+      gap: 10px;
+    }
+
+    .prezzo-lista li::before {
+      content: "✓";
+      color: var(--primario);
+      font-weight: bold;
+    }
+
+    .prezzo-lista li.no {
+      opacity: 0.3;
+      text-decoration: line-through;
+    }
+
+    .prezzo-lista li.no::before { content: "✗"; color: #888; }
+
+    /* ═══════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════ */
+    .footer {
+      background: #080812;
+      padding: 40px;
+      text-align: center;
+      color: rgba(255,255,255,0.3);
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+  ╔══════════════════════════════════════════════════╗
+  ║           ESERCIZIO 8 – Landing Page             ║
+  ║              ⭐⭐⭐⭐ Livello: Alto               ║
+  ╚══════════════════════════════════════════════════╝
+
+  Una landing page completa per un prodotto chiamato "Flowly".
+  È il più complesso di tutti: devi completare CSS e HTML.
+
+  📋 COSA FARE (CSS):
+  ─────────────────────────────────────────────────
+  TODO 1 → .navbar → flexbox con logo/nav ai lati
+  TODO 2 → .hero-bottoni → flexbox centrato
+  TODO 3 → .features-griglia → CSS grid a 3 colonne
+  TODO 4 → .prezzi-griglia → flexbox con 3 card
+
+  📋 COSA FARE (HTML):
+  ─────────────────────────────────────────────────
+  TODO 5 → Aggiungi una QUARTA feature card nella griglia:
+            icona: 🔒  titolo: "Sicurezza totale"
+            testo: "I tuoi dati sono sempre protetti con
+                    crittografia end-to-end e backup automatici."
+
+  TODO 6 → Nella sezione prezzi, aggiungi il piano "Pro" (quello
+            popolare, al centro) con:
+            - badge "Più popolare"
+            - prezzo: €12/mese
+            - funzionalità: Tutto del Free + Integrazioni avanzate
+              + Priorità nel supporto + Team fino a 10 persone
+              - (senza) API avanzate
+
+  TODO 7 → Completa il footer con il nome del prodotto
+            e l'anno corrente
+
+  ─────────────────────────────────────────────────
+  🎯 SFIDA EXTRA:
+     Aggiungi una sezione "Testimonianze" tra features
+     e prezzi, con 3 citazioni di utenti.
+     Usa flexbox per affiancarle!
+  ─────────────────────────────────────────────────
+  💡 SUGGERIMENTO: inizia dalla navbar (TODO 1),
+     poi procedi dall'alto verso il basso.
+     Usa gli elementi già presenti come modello!
+  -->
+
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="navbar-logo">Flow<span>ly</span></div>
+    <ul class="navbar-nav">
+      <li><a href="#">Funzionalità</a></li>
+      <li><a href="#">Prezzi</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="#" style="color:white;font-weight:bold;">Inizia gratis →</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-badge">✨ Nuovo: Integrazione con AI</div>
+    <h1>Organizza il tuo lavoro.<br><span>Senza caos.</span></h1>
+    <p>Flowly ti aiuta a gestire progetti, collaborare con il team e rimanere concentrato su ciò che conta davvero.</p>
+    <div class="hero-bottoni">
+      <a href="#" class="btn-primario">Inizia gratis</a>
+      <a href="#" class="btn-secondario">Guarda il video ▶</a>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="sezione-titolo">
+      <h2>Tutto quello che ti serve</h2>
+      <p>Strumenti pensati per team moderni che vogliono fare di più in meno tempo.</p>
+    </div>
+
+    <div class="features-griglia">
+
+      <div class="feature-card">
+        <span class="feature-icona">📋</span>
+        <h3 class="feature-titolo">Board visivi</h3>
+        <p class="feature-testo">Gestisci le attività con board Kanban personalizzabili. Trascina, riorganizza, personalizza le colonne come vuoi.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icona">⚡</span>
+        <h3 class="feature-titolo">Automazioni</h3>
+        <p class="feature-testo">Crea regole automatiche per eliminare il lavoro ripetitivo. "Quando X succede, fai Y" — senza codice.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icona">📊</span>
+        <h3 class="feature-titolo">Report e metriche</h3>
+        <p class="feature-testo">Monitora l'avanzamento dei progetti con grafici chiari. Condividi i report con il team in un click.</p>
+      </div>
+
+      <!-- TODO 5 → Aggiungi la quarta feature card qui -->
+
+    </div>
+  </section>
+
+  <!-- PREZZI -->
+  <section class="prezzi">
+    <div class="sezione-titolo">
+      <h2>Prezzi semplici</h2>
+      <p>Nessuna sorpresa. Cambia o cancella quando vuoi.</p>
+    </div>
+
+    <div class="prezzi-griglia">
+
+      <!-- Piano Free -->
+      <div class="prezzo-card">
+        <p class="prezzo-piano">Free</p>
+        <p class="prezzo-importo">€0</p>
+        <p class="prezzo-periodo">per sempre</p>
+        <ul class="prezzo-lista">
+          <li>3 progetti attivi</li>
+          <li>5 membri del team</li>
+          <li>1GB di spazio</li>
+          <li class="no">Integrazioni avanzate</li>
+          <li class="no">Supporto prioritario</li>
+        </ul>
+        <a href="#" class="btn-secondario" style="width:100%;text-align:center;">Inizia gratis</a>
+      </div>
+
+      <!-- TODO 6 → Aggiungi qui il piano "Pro" (vedi istruzioni) -->
+
+      <!-- Piano Business -->
+      <div class="prezzo-card">
+        <p class="prezzo-piano">Business</p>
+        <p class="prezzo-importo">€35</p>
+        <p class="prezzo-periodo">per mese</p>
+        <ul class="prezzo-lista">
+          <li>Progetti illimitati</li>
+          <li>Utenti illimitati</li>
+          <li>Spazio illimitato</li>
+          <li>Tutte le integrazioni</li>
+          <li>API avanzate</li>
+        </ul>
+        <a href="#" class="btn-secondario" style="width:100%;text-align:center;">Contattaci</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <!-- TODO 7 → Scrivi qui: "© [anno] Flowly — Tutti i diritti riservati" -->
+  </footer>
+
+</body>
+</html>

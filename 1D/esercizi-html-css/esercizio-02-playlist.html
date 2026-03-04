@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esercizio 2 – Playlist musicale</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0f0f0f;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .player {
+      background-color: #1a1a1a;
+      border-radius: 20px;
+      padding: 30px;
+      width: 340px;
+    }
+
+    .titolo-playlist {
+      /* TODO 1 → colore del testo: #1db954  */
+      color: ;
+
+      /* TODO 2 → dimensione font: 22px */
+      font-size: ;
+
+      /* TODO 3 → peso del font: bold */
+      font-weight: ;
+
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .canzone {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 12px;
+      border-radius: 10px;
+      margin-bottom: 8px;
+      cursor: pointer;
+
+      /* TODO 4 → colore testo: white */
+      color: ;
+
+      /* TODO 5 → transizione al passaggio del mouse:
+                  "background-color:red 0.3s ease"  */
+      transition: ;
+    }
+
+    .canzone:hover {
+      /* TODO 6 → colore di sfondo al passaggio del mouse: #2a2a2a */
+      background-color: ;
+    }
+
+    .canzone.attiva {
+      /* TODO 7 → colore di sfondo per la canzone attiva: #1db95422 */
+      background-color: ;
+
+      /* TODO 8 → bordo sinistro verde: 3px solid #1db954 */
+      border-left: ;
+    }
+
+    .numero {
+      color: #555;
+      font-size: 13px;
+      width: 20px;
+      text-align: center;
+    }
+
+    .canzone.attiva .numero {
+      color: #1db954;
+      font-weight: bold;
+    }
+
+    .info-canzone {
+      flex: 1;
+    }
+
+    .titolo-canzone {
+      font-size: 15px;
+      margin: 0 0 3px 0;
+    }
+
+    .artista {
+      font-size: 12px;
+
+      /* TODO 9 → colore del testo: #aaaaaa */
+      color: ;
+
+      margin: 0;
+    }
+
+    .durata {
+      font-size: 13px;
+      color: #666;
+    }
+
+    .footer {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid #2a2a2a;
+      text-align: center;
+
+      /* TODO 10 → colore: #555 */
+      color: ;
+
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+  ╔══════════════════════════════════════════════════╗
+  ║         ESERCIZIO 2 – Playlist musicale          ║
+  ║                ⭐⭐ Livello: Facile               ║
+  ╚══════════════════════════════════════════════════╝
+
+  Hai davanti una playlist in stile Spotify.
+  L'HTML è già completo, devi solo riempire i valori
+  CSS mancanti (cerca i commenti TODO nel <style>)!
+
+  📋 COSA FARE:
+  ─────────────────────────────────────────────────
+  Trova tutti i commenti "TODO" nel CSS qui sopra
+  e aggiungi il valore corretto dopo i due punti.
+
+  Esempio:
+    color: ;         ← da completare
+    color: white;    ← versione corretta
+
+  Sono in tutto 10 TODO da completare!
+  ─────────────────────────────────────────────────
+  💡 SUGGERIMENTO: apri il file nel browser mentre
+     lavori per vedere subito i risultati!
+  -->
+
+  <div class="player">
+    <p class="titolo-playlist">🎵 La mia playlist</p>
+
+    <div class="canzone attiva">
+      <span class="numero">▶</span>
+      <div class="info-canzone">
+        <p class="titolo-canzone">Blinding Lights</p>
+        <p class="artista">The Weeknd</p>
+      </div>
+      <span class="durata">3:20</span>
+    </div>
+
+    <div class="canzone">
+      <span class="numero">2</span>
+      <div class="info-canzone">
+        <p class="titolo-canzone">As It Was</p>
+        <p class="artista">Harry Styles</p>
+      </div>
+      <span class="durata">2:37</span>
+    </div>
+
+    <div class="canzone">
+      <span class="numero">3</span>
+      <div class="info-canzone">
+        <p class="titolo-canzone">Levitating</p>
+        <p class="artista">Dua Lipa</p>
+      </div>
+      <span class="durata">3:23</span>
+    </div>
+
+    <div class="canzone">
+      <span class="numero">4</span>
+      <div class="info-canzone">
+        <p class="titolo-canzone">Stay</p>
+        <p class="artista">The Kid LAROI, Justin Bieber</p>
+      </div>
+      <span class="durata">2:21</span>
+    </div>
+
+    <div class="canzone">
+      <span class="numero">5</span>
+      <div class="info-canzone">
+        <p class="titolo-canzone">Heat Waves</p>
+        <p class="artista">Glass Animals</p>
+      </div>
+      <span class="durata">3:59</span>
+    </div>
+
+    <div class="footer">5 canzoni · 15 minuti</div>
+  </div>
+
+</body>
+</html>

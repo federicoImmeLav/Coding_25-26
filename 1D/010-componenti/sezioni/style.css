@@ -1,0 +1,16 @@
+/* SEZIONE 1 */
+.hero1 {
+    background-color: darkslategray;
+    height: 95vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: monospace;
+}
+
+
+/* SEZIONE 2 */
+.sezione2 {
+    padding: 15vh;
+}

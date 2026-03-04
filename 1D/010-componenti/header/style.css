@@ -1,0 +1,49 @@
+/* HEADER 1 */
+.header1 {
+    /* colore di sfondo */
+    background-color: darkseagreen;
+    /* altezza */
+    height: 8vh;
+    /*  comando per centrare il contenuto */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* HEADER 2 */
+.header2 {
+    background-color: cadetblue;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 3vh;
+    padding-right: 3vh;
+}
+
+
+/* HEADER 3 */
+.header3 {
+    background-color:cornflowerblue;
+    height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+
+/* personalizzazione dei pulsanti */
+button {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: none;
+    font-family: monospace;
+}
+
+/* animazione al passaggio del mouse sul pulsante */
+button:hover {
+    cursor: pointer;
+    background-color: black;
+    color: gray;
+}

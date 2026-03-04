@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Esercizio 4 – Pagina Ricetta</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Georgia, serif;
+      background-color: #fffbf5;
+      color: #2c2c2c;
+      padding: 40px 20px;
+    }
+
+    .contenitore {
+      max-width: 680px;
+      margin: 0 auto;
+    }
+
+    /* INTESTAZIONE */
+    .intestazione img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 16px;
+      display: block;
+    }
+
+    .titolo-ricetta {
+      font-size: 34px;
+      margin: 24px 0 8px;
+      color: #1a1a1a;
+    }
+
+    .sottotitolo {
+      font-size: 16px;
+      color: #888;
+      font-style: italic;
+      margin-bottom: 24px;
+    }
+
+    /* BADGE INFO */
+    .badge-lista {
+      /* TODO 1 → usa flexbox: display: flex */
+      display: ;
+
+      /* TODO 2 → spazio tra badge: gap: 12px */
+      gap: ;
+
+      /* TODO 3 → mandali a capo se non ci stanno: flex-wrap: wrap */
+      flex-wrap: ;
+
+      margin-bottom: 32px;
+    }
+
+    .badge {
+      background-color: #fff3e0;
+      border: 1px solid #f9c784;
+      border-radius: 30px;
+      padding: 6px 16px;
+      font-size: 13px;
+      color: #a0522d;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* SEZIONE */
+    .sezione {
+      margin-bottom: 32px;
+    }
+
+    .titolo-sezione {
+      font-size: 20px;
+      font-weight: bold;
+      color: #a0522d;
+      border-bottom: 2px solid #f9c784;
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    /* GRIGLIA INGREDIENTI */
+    .griglia-ingredienti {
+      display: grid;
+
+      /* TODO 4 → 2 colonne uguali: grid-template-columns: 1fr 1fr */
+      grid-template-columns: ;
+
+      gap: 10px;
+    }
+
+    .ingrediente {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: white;
+      border: 1px solid #ece0cc;
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .ingrediente::before {
+      content: "✓";
+      color: #a0522d;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    /* PASSAGGI */
+    .passaggi {
+      counter-reset: step;
+      list-style: none;
+    }
+
+    .passaggi li {
+      counter-increment: step;
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+      font-size: 15px;
+      line-height: 1.6;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .passaggi li::before {
+      content: counter(step);
+      background-color: #a0522d;
+      color: white;
+      border-radius: 50%;
+      min-width: 30px;
+      height: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 13px;
+      margin-top: 2px;
+    }
+
+    /* NOTA FINALE */
+    .nota {
+      background-color: #fff3e0;
+      border-left: 4px solid #f9c784;
+      border-radius: 0 10px 10px 0;
+      padding: 16px 20px;
+      font-size: 14px;
+      font-family: 'Segoe UI', sans-serif;
+      color: #6b4226;
+      line-height: 1.6;
+
+      /* TODO 5 → aggiungi: font-style: italic */
+      font-style: ;
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+  ╔══════════════════════════════════════════════════╗
+  ║            ESERCIZIO 4 – Pagina Ricetta          ║
+  ║               ⭐⭐ Livello: Medio                 ║
+  ╚══════════════════════════════════════════════════╝
+
+  Una pagina ricetta per la "Torta al cioccolato".
+  Devi completare il CSS E aggiungere elementi mancanti.
+
+  📋 COSA FARE:
+  ─────────────────────────────────────────────────
+  CSS (TODO nel <style>):
+    TODO 1 → display della badge-lista
+    TODO 2 → gap tra badge
+    TODO 3 → flex-wrap della badge-lista
+    TODO 4 → grid-template-columns degli ingredienti
+    TODO 5 → font-style della nota finale
+
+  HTML (TODO nel <body>):
+    TODO 6 → Aggiungi 3 badge mancanti
+    TODO 7 → Aggiungi 4 ingredienti mancanti nella griglia
+    TODO 8 → Aggiungi il 3° e 4° passaggio della ricetta
+  ─────────────────────────────────────────────────
+  💡 SUGGERIMENTO: guarda come sono fatti gli elementi
+     già presenti e copiane la struttura!
+  -->
+
+  <div class="contenitore">
+
+    <div class="intestazione">
+      <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=700&q=80"
+           alt="Torta al cioccolato">
+    </div>
+
+    <h1 class="titolo-ricetta">🍫 Torta al Cioccolato</h1>
+    <p class="sottotitolo">Morbida, golosa, perfetta per ogni occasione</p>
+
+    <div class="badge-lista">
+      <span class="badge">⏱ 20 min preparazione</span>
+      <span class="badge">🔥 35 min cottura</span>
+
+      <!-- TODO 6 → Aggiungi questi 3 badge:
+           - "👥 8 porzioni"
+           - "👩‍🍳 Facile"
+           - "🌡 180°C"
+      -->
+
+    </div>
+
+    <!-- INGREDIENTI -->
+    <div class="sezione">
+      <h2 class="titolo-sezione">Ingredienti</h2>
+      <div class="griglia-ingredienti">
+
+        <div class="ingrediente">200g cioccolato fondente</div>
+        <div class="ingrediente">3 uova</div>
+        <div class="ingrediente">150g burro</div>
+        <div class="ingrediente">150g zucchero</div>
+
+        <!-- TODO 7 → Aggiungi questi 4 ingredienti mancanti:
+             - "100g farina 00"
+             - "1 bustina lievito"
+             - "1 pizzico di sale"
+             - "50ml latte"
+        -->
+
+      </div>
+    </div>
+
+    <!-- PROCEDIMENTO -->
+    <div class="sezione">
+      <h2 class="titolo-sezione">Procedimento</h2>
+      <ol class="passaggi">
+        <li>Sciogli il cioccolato fondente e il burro a bagnomaria, mescolando delicatamente fino ad ottenere un composto liscio. Lascia intiepidire.</li>
+        <li>In una ciotola, sbatti le uova con lo zucchero con una frusta elettrica per circa 5 minuti, fino a ottenere un composto chiaro e spumoso.</li>
+
+        <!-- TODO 8 → Aggiungi questi 2 passaggi:
+             Passaggio 3: "Unisci il cioccolato fuso al composto di uova,
+             mescolando delicatamente dal basso verso l'alto. Aggiungi poi
+             la farina setacciata con il lievito e un pizzico di sale."
+
+             Passaggio 4: "Versa l'impasto in una tortiera imburrata
+             (diametro 22cm) e cuoci in forno preriscaldato a 180°C per
+             circa 35 minuti. Fai la prova stecchino prima di sfornare!"
+        -->
+
+      </ol>
+    </div>
+
+    <div class="nota">
+      💡 <strong>Consiglio:</strong> Per una torta ancora più umida, aggiungi
+      50ml di caffè espresso freddo all'impasto. Puoi decorare con zucchero
+      a velo o granella di nocciole prima di servire.
+    </div>
+
+  </div>
+</body>
+</html>
