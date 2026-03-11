@@ -14,3 +14,71 @@
 .sezione2 {
     padding: 15vh;
 }
+
+/* SEZIONE 3 */
+.destra3 {
+    /* imposto immagine di sfondo */
+    background-image: url("./img/image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+/* per dire ai div di stare uno di fianco all'altro,
+biogna usare display flex */
+.sezione3 {
+    display: flex;
+    height: 50vh;
+    background-color: lightblue;
+}
+
+/* posso dire a destra e sinistra quanto spazio occupare */
+.sinistra3 {
+    /* larghezza 2 */
+    flex: 2;
+    margin: 10vh;
+}
+.destra3 {
+    /* larghezza 2 */
+    flex: 2;
+    margin: 10vh;
+}
+
+
+/* SEZIONE 4 */
+/* personalizzo card esterna */
+.card {
+    width: 300px;
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    /* per evitare che img esce da bordo */
+    overflow: hidden;
+}
+
+/* immagine della card */
+.card-img {
+    height: 100px;
+    background-image: url("./img/image.png");
+    background-size: cover;
+}
+
+/* bottone */
+.bottone {
+    background-color: cornflowerblue;
+    color: white;
+    padding: 8px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.card-bottone {
+    display: flex;
+    padding: 10px;
+}
+
+.sezione4 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10vh;
+}

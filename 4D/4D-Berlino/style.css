@@ -1,7 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@200..700&display=swap');
+
+/* creo le variabili del css */
+:root {
+    --colore-main: #fd5d2e; 
+    --font-titoli: "Bebas Neue", sans-serif;
+    --font-testo: "Oswald", sans-serif;
+}
 
 .titolo {
-    font-family: "Bebas Neue", sans-serif;
+    font-family: var(--font-titoli);
     font-size: x-large;
 }
 
@@ -10,7 +17,7 @@ body {
 }
 
 header {
-    background-color: #fd5d2e;
+    background-color: var(--colore-main);
     height: 8vh;
     display: flex;
     align-items: center;
@@ -28,8 +35,8 @@ header {
 }
 
 .sottotitolo {
-    background-color: #fd5d2e;
-    font-family: "Bebas Neue";
+    background-color: var(--colore-main);
+    font-family: var(--font-titoli);
     font-size: larger;
     padding: 20px 40px;
 }
@@ -52,14 +59,83 @@ header {
 }
 
 .elemento p {
-    font-family: "Bebas Neue";
+    font-family: var(--font-titoli);
     text-align: center;
     font-size: large;
 }
 
 h2 {
-    font-family: "Bebas Neue";
-    color: #fd5d2e;
+    font-family: var(--font-titoli);
+    color: var(--colore-main);
     text-align: center;
 }
 
+.immagine-p {
+    background-image: url("./img/berlino1.avif");
+    background-size: cover;
+    /* con il numero di fianco a flex dico quanto spazio deve occupare il div */
+    flex: 2;
+    margin: 10vh;
+}
+
+.informazioni {
+    display: flex;
+}
+
+.testo {
+    flex: 2;
+    padding: 10vh;
+    font-family: var(--font-testo);
+}
+
+.mezzi {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 30px;
+    padding: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-titolo {
+    text-align: center;
+    font-family: var(--font-titoli);
+    color: var(--colore-main);
+    margin: 0;
+}
+
+.card-testo {
+    font-family: var(--font-testo);
+}
+
+.card-bottone {
+    font-family: var(--font-testo);
+    background-color: var(--colore-main);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
+/* animazione solo quando passo sopra con il mouse */
+.card-bottone:hover {
+    cursor: pointer;
+    color: var(--colore-main);
+    background-color: black;
+}
+
+/* animazione solo quando clicco */
+.card-bottone:active {
+    transform: scale(0.95);
+}
+
+/* aggiungo una emoticon con il css */
+.card-titolo::after {
+    content: "🚧"
+}
