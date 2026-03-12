@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 480" width="400" height="480">
+  <defs>
+    <!-- Background warm beige -->
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="70%">
+      <stop offset="0%" stop-color="#f5e6d3"/>
+      <stop offset="100%" stop-color="#e8d0b0"/>
+    </radialGradient>
+
+    <!-- Drink gradient: deep ruby red to blood orange -->
+    <linearGradient id="drinkGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#c0392b" stop-opacity="0.9"/>
+      <stop offset="40%" stop-color="#e05a30" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#8b1a1a" stop-opacity="0.95"/>
+    </linearGradient>
+
+    <!-- Glass gradient -->
+    <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#cce0f0" stop-opacity="0.6"/>
+      <stop offset="30%" stop-color="#eaf4fc" stop-opacity="0.3"/>
+      <stop offset="70%" stop-color="#eaf4fc" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#b0cce0" stop-opacity="0.5"/>
+    </linearGradient>
+
+    <!-- Ice cube gradient -->
+    <linearGradient id="iceGrad1" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#dff0fa" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#b8d8ee" stop-opacity="0.7"/>
+    </linearGradient>
+    <linearGradient id="iceGrad2" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#e8f5fc" stop-opacity="0.85"/>
+      <stop offset="100%" stop-color="#c5dff0" stop-opacity="0.65"/>
+    </linearGradient>
+
+    <!-- Orange slice gradient -->
+    <radialGradient id="orangeGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fff5e0"/>
+      <stop offset="60%" stop-color="#ff8c00" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#cc5500"/>
+    </radialGradient>
+
+    <!-- Shadow -->
+    <filter id="softShadow" x="-20%" y="-10%" width="140%" height="140%">
+      <feDropShadow dx="4" dy="8" stdDeviation="10" flood-color="#a0602a" flood-opacity="0.25"/>
+    </filter>
+
+    <!-- Watercolor texture filter -->
+    <filter id="watercolor" x="-5%" y="-5%" width="110%" height="110%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.04" numOctaves="4" result="noise"/>
+      <feDisplacementMap in="SourceGraphic" in2="noise" scale="3" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <clipPath id="glassClip">
+      <path d="M105,120 L115,370 Q200,390 285,370 L295,120 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="480" fill="url(#bgGrad)"/>
+
+  <!-- Subtle watercolor wash behind glass -->
+  <ellipse cx="200" cy="300" rx="130" ry="160" fill="#d4956a" fill-opacity="0.08" filter="url(#watercolor)"/>
+
+  <!-- Glass body with drink fill -->
+  <g filter="url(#softShadow)">
+    <!-- Drink fill clipped to glass shape -->
+    <path d="M108,135 L118,368 Q200,388 282,368 L292,135 Z"
+          fill="url(#drinkGrad)" clip-path="url(#glassClip)" filter="url(#watercolor)"/>
+
+    <!-- Watercolor bleed effect at top of drink -->
+    <ellipse cx="200" cy="140" rx="88" ry="12" fill="#e05a30" fill-opacity="0.3" filter="url(#watercolor)"/>
+
+    <!-- Ice cubes -->
+    <!-- Back left ice -->
+    <g clip-path="url(#glassClip)">
+      <rect x="120" y="145" width="65" height="60" rx="8" fill="url(#iceGrad1)" fill-opacity="0.82" transform="rotate(-8,152,175)" filter="url(#watercolor)"/>
+      <rect x="120" y="145" width="65" height="60" rx="8" fill="none" stroke="#c8e8f8" stroke-width="1.5" stroke-opacity="0.7" transform="rotate(-8,152,175)"/>
+      <!-- Ice reflection lines -->
+      <line x1="128" y1="158" x2="138" y2="195" stroke="white" stroke-width="1.5" stroke-opacity="0.5" transform="rotate(-8,152,175)"/>
+
+      <!-- Front right ice -->
+      <rect x="205" y="150" width="68" height="65" rx="8" fill="url(#iceGrad2)" fill-opacity="0.85" transform="rotate(6,239,182)" filter="url(#watercolor)"/>
+      <rect x="205" y="150" width="68" height="65" rx="8" fill="none" stroke="#d0ecf8" stroke-width="1.5" stroke-opacity="0.7" transform="rotate(6,239,182)"/>
+      <line x1="213" y1="162" x2="222" y2="205" stroke="white" stroke-width="1.5" stroke-opacity="0.5" transform="rotate(6,239,182)"/>
+
+      <!-- Small ice front center -->
+      <rect x="160" y="210" width="55" height="50" rx="7" fill="url(#iceGrad1)" fill-opacity="0.75" transform="rotate(-3,187,235)" filter="url(#watercolor)"/>
+      <rect x="160" y="210" width="55" height="50" rx="7" fill="none" stroke="#c8e8f8" stroke-width="1" stroke-opacity="0.6" transform="rotate(-3,187,235)"/>
+    </g>
+
+    <!-- Glass outline / transparent walls -->
+    <path d="M105,120 L115,370 Q200,392 285,370 L295,120 Z"
+          fill="url(#glassGrad)" stroke="#9bbdd4" stroke-width="1.5" stroke-opacity="0.5"/>
+
+    <!-- Glass base -->
+    <ellipse cx="200" cy="378" rx="87" ry="14" fill="#c8dce8" fill-opacity="0.55" filter="url(#watercolor)"/>
+    <rect x="168" y="370" width="64" height="18" rx="4" fill="#ccdde8" fill-opacity="0.6"/>
+    <ellipse cx="200" cy="388" rx="45" ry="8" fill="#b0c8dc" fill-opacity="0.5"/>
+
+    <!-- Glass highlight left -->
+    <path d="M112,140 Q107,250 112,350" stroke="white" stroke-width="3" fill="none" stroke-opacity="0.45" stroke-linecap="round"/>
+    <!-- Glass highlight right -->
+    <path d="M288,140 Q293,250 288,350" stroke="white" stroke-width="2" fill="none" stroke-opacity="0.25" stroke-linecap="round"/>
+  </g>
+
+  <!-- Shadow under glass -->
+  <ellipse cx="200" cy="400" rx="90" ry="12" fill="#8b5a2b" fill-opacity="0.18"/>
+
+  <!-- ===== ORANGE SLICE GARNISH ===== -->
+  <g transform="translate(258, 108) rotate(15)">
+    <!-- Orange slice full circle -->
+    <circle cx="0" cy="0" r="42" fill="#e8650a" filter="url(#watercolor)"/>
+    <!-- Inner fruit -->
+    <circle cx="0" cy="0" r="36" fill="#ff8c1a" fill-opacity="0.9"/>
+    <!-- White pith ring -->
+    <circle cx="0" cy="0" r="36" fill="none" stroke="#fff5e0" stroke-width="4" stroke-opacity="0.8"/>
+    <!-- Segment lines (blood orange style - deep red tones) -->
+    <line x1="0" y1="-36" x2="0" y2="36" stroke="#c0390a" stroke-width="1.2" stroke-opacity="0.7"/>
+    <line x1="-36" y1="0" x2="36" y2="0" stroke="#c0390a" stroke-width="1.2" stroke-opacity="0.7"/>
+    <line x1="-25" y1="-25" x2="25" y2="25" stroke="#c0390a" stroke-width="1.2" stroke-opacity="0.7"/>
+    <line x1="25" y1="-25" x2="-25" y2="25" stroke="#c0390a" stroke-width="1.2" stroke-opacity="0.7"/>
+    <!-- Center -->
+    <circle cx="0" cy="0" r="7" fill="#fff0d0" fill-opacity="0.8"/>
+    <!-- Blood orange red blush -->
+    <circle cx="8" cy="-5" r="12" fill="#8b1a1a" fill-opacity="0.25"/>
+    <circle cx="-6" cy="8" r="10" fill="#8b1a1a" fill-opacity="0.2"/>
+    <!-- Outer skin -->
+    <circle cx="0" cy="0" r="42" fill="none" stroke="#cc5500" stroke-width="3"/>
+    <!-- Notch for rim of glass -->
+    <line x1="-5" y1="38" x2="5" y2="38" stroke="#cc5500" stroke-width="5" stroke-linecap="round"/>
+  </g>
+
+  <!-- Watercolor drip/bleed from orange onto glass -->
+  <ellipse cx="268" cy="152" rx="18" ry="6" fill="#e05a30" fill-opacity="0.2" filter="url(#watercolor)"/>
+
+  <!-- Artist signature touch: subtle red pomegranate seed scatter at base of glass -->
+  <circle cx="155" cy="360" r="3.5" fill="#8b1a1a" fill-opacity="0.5"/>
+  <circle cx="248" cy="355" r="3" fill="#8b1a1a" fill-opacity="0.45"/>
+  <circle cx="180" cy="365" r="2.5" fill="#c0392b" fill-opacity="0.4"/>
+</svg>
