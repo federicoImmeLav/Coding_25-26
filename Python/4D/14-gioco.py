@@ -1,5 +1,6 @@
 import turtle
 import random
+import time # aggiungo il tempo
 
 turtle.tracer(0)
 
@@ -37,8 +38,19 @@ punteggio.hideturtle()
 punteggio.goto(0,310)
 punteggio.write(f"Punti: {punti}", align="center")
 
+# turtle che scrive il tempo
+tempo_rimanete = 30
+tempo = turtle.Turtle()
+tempo.penup()
+tempo.goto(0,-320)
+tempo.hideturtle()
+tempo.write(f"Tempo rimasto: {tempo_rimanete}", align = "center")
+
 # creo schermata di gioco
 s = turtle.Screen()
+
+# faccio partire il cronometro del gioco
+tempo_iniziale = time.time()
 
 # creo dizionario comandi
 tasti = {
@@ -71,6 +83,19 @@ s.onkeyrelease(lambda: tasto_alzato("d"), "d")
 # creo la funz gioco()
 def gioco():
     global punti # inserisco nella funzione la variabile
+
+    tempo_passato = time.time() - tempo_iniziale
+    tempo.clear()
+    tempo.write(f"Tempo rimasto: {int(tempo_rimanete) - int(tempo_passato)}", align="center")
+
+    # se il tempo passato supera il tempo riamente, il gioco si ferma
+    if tempo_passato > tempo_rimanete:
+        punteggio.clear()
+        punteggio.goto(0,0)
+        punteggio.write(f"Bravo, hai fatto {punti} punti!", font=("Arial", 30), align="center")
+        turtle.update()
+        return
+
     # if dei tasti
     if tasti["w"]:
         pg.setheading(90) # punta su
@@ -123,3 +148,6 @@ s.mainloop()
 # 7. Creo turtle della mela
 # 8. Funzione che se prendo la mela, la mela scappa
 # 9. Punteggio quando prendo la mela
+# 10. Importo il tempo
+# 11. Imposto il cronometro che calcola il tempo che passa
+# 12. Se il tempo finisce il gioco si ferma
