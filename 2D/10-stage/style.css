@@ -1,0 +1,80 @@
+/* Creo variabili css */
+:root {
+    --colore-principale: teal;
+    --bianco: GhostWhite;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    background-color: var(--colore-principale);
+    height: 7vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.bottone-menu {
+    background-color: var(--colore-principale);
+    border: 1px solid var(--bianco);
+    color: var(--bianco);
+    padding: 5px 20px;
+}
+
+.bottone-menu:hover {
+    background-color: var(--bianco);
+    color: var(--colore-principale);
+    cursor: pointer;
+}
+
+#stage {
+    height: 93vh;
+    display: flex;
+    align-items: center;
+}
+
+.info {
+    width: 50%;
+    padding: 15vh;
+}
+
+.mappa {
+    width: 50%;
+    padding: 15vh;
+}
+
+h2 {
+    font-family: monospace;
+    color: var(--colore-principale);
+}
+
+.testo-stage {
+    font-family: monospace;
+}
+
+#avanzamento {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.totale, .assenze {
+    width: 100%;
+    background-color: lightgray;
+    height: 20px;
+}
+
+.totale-pieno {
+    background-color: var(--colore-principale);
+    width: 0;
+    height: 20px;
+}
+
+.totale-pieno2 {
+    background-color: red;
+    width: 0;
+    height: 20px;
+}
