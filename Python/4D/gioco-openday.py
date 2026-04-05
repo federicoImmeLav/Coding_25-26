@@ -8,16 +8,16 @@ import math
 #  Cambia il nome e il colore prima di premere PLAY
 # ============================================================
 
-NOME_GIOCATORE = "Miriam"          # ← Scrivi il tuo nome tra le virgolette
+NOME_GIOCATORE = "Alessio"          # ← Scrivi il tuo nome tra le virgolette
 
 # Scegli UN colore per il serpente (togli il # dal colore che vuoi):
 #COLORE_SERPENTE = (34, 197, 94)      # Verde smeraldo  🟢
 # COLORE_SERPENTE = (239, 68, 68)    # Rosso fuoco     🔴
 # COLORE_SERPENTE = (59, 130, 246)   # Blu oceano      🔵
 # COLORE_SERPENTE = (234, 179, 8)    # Giallo sole     🟡
-COLORE_SERPENTE = (168, 85, 247)   # Viola magico    🟣
+# COLORE_SERPENTE = (168, 85, 247)   # Viola magico    🟣
 # COLORE_SERPENTE = (249, 115, 22)   # Arancione       🟠
-# COLORE_SERPENTE = (236, 72, 153)   # Rosa shock      🩷
+COLORE_SERPENTE = (236, 72, 153)   # Rosa shock      🩷
 # COLORE_SERPENTE = (20, 184, 166)   # Turchese        🩵
 
 # ============================================================

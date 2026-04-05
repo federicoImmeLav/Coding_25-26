@@ -54,7 +54,7 @@ def coordinate(x,y):
         bers.teleport(a,b)
     else:
         print("lontano")
-
+ 
 # funzione che diminuisce il timer di 1 ogni secondo
 def aggiorna_timer():
     global tempo
