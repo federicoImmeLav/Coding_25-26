@@ -1,0 +1,16 @@
+/* Rimuoviamo i margini di default per non avere bordi bianchi attorno alla pagina */
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: red;
+    text-align: center; /* Centra il pulsante all all'interno dell'header */
+    padding: 20px; /* Aggiungiamo un po' di spazio per far respirare il pulsante */
+}
+
+.fullscreen-section {
+    background-color: green;
+    height: 100vh; /* Altezza pari al 100% della viewport (grande come tutta la pagina) */
+}
